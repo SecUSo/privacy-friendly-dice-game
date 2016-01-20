@@ -81,23 +81,20 @@ public class MainActivity extends AppCompatActivity {
             final int finalJ = j;
             dice[j].setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    isLocked[finalJ] = !isLocked[finalJ];
-                    updateView();
+                    setLock(finalJ, v);
                 }
             });
         }
     }
 
-    public void updateView() {
-        for (int i = 0; i < dice.length; i++) {
-            if (isLocked[i])
-                dice[i].setBackgroundDrawable(getResources().getDrawable(R.drawable.dice_locked));
+    public void setLock(int finalJ, View button) {
+        boolean locked = isLocked[finalJ];
+        if (!locked) {
+            button.setBackgroundDrawable(getResources().getDrawable(R.drawable.dice_locked));
+        } else {
+            button.setBackgroundDrawable(getResources().getDrawable(R.drawable.dice));
         }
-
-        for (int i = 0; i < dice.length; i++) {
-            if (!isLocked[i])
-                dice[i].setBackgroundDrawable(getResources().getDrawable(R.drawable.dice));
-        }
+        isLocked[finalJ] = !isLocked[finalJ];
     }
 
     public void setDice(int[] results) {
