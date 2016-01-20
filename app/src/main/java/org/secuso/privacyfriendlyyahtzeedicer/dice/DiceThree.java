@@ -1,6 +1,5 @@
 package org.secuso.privacyfriendlyyahtzeedicer.dice;
 
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;

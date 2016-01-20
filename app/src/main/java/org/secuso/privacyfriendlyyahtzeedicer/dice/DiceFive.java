@@ -50,6 +50,5 @@ public class DiceFive extends View {
         canvas.drawCircle(buttonCenterX, buttonCenterY, radius, paint);
     }
 
-
 }
 
