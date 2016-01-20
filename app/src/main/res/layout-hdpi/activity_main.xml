@@ -17,21 +17,21 @@
 
         <Button
             android:id="@+id/button_dice_one"
-            android:layout_margin="10dp"
+            android:layout_margin="4dp"
             android:background="@drawable/dice"
             android:textAllCaps="false"
              />
 
         <Button
             android:id="@+id/button_dice_two"
-            android:layout_margin="10dp"
+            android:layout_margin="4dp"
             android:background="@drawable/dice"
             android:textAllCaps="false"
              />
 
         <Button
             android:id="@+id/button_dice_three"
-            android:layout_margin="10dp"
+            android:layout_margin="4dp"
             android:background="@drawable/dice"
             android:textAllCaps="false"
              />
@@ -61,14 +61,14 @@
 
         <Button
             android:id="@+id/button_dice_four"
-            android:layout_margin="10dp"
+            android:layout_margin="4dp"
             android:background="@drawable/dice"
             android:textAllCaps="false"
              />
 
         <Button
             android:id="@+id/button_dice_five"
-            android:layout_margin="10dp"
+            android:layout_margin="4dp"
             android:background="@drawable/dice"
             android:textAllCaps="false"
              />
