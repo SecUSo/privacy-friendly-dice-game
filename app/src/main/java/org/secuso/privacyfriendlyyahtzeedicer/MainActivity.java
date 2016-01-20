@@ -168,6 +168,7 @@ public class MainActivity extends AppCompatActivity {
         animation.setRepeatMode(Animation.REVERSE);
 
         for (int i=0;i<dice.length;i++) {
+            if (!isLocked[i])
             dice[i].startAnimation(animation);
         }
     }
