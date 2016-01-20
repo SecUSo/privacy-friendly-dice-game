@@ -6,6 +6,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Display;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import org.secuso.privacyfriendlyyahtzeedicer.dice.DiceFive;
 import org.secuso.privacyfriendlyyahtzeedicer.dice.DiceFour;
@@ -63,13 +65,17 @@ public class MainActivity extends AppCompatActivity {
         setDice(new int[]{1, 2, 3, 4, 5});
         oldResults = new int[]{1, 2, 3, 4, 5};
 
-        Button rollDiceButton = (Button) findViewById(R.id.button);
-
         final RelativeLayout diceContainer = (RelativeLayout) findViewById(R.id.dice_frame);
         final RelativeLayout diceRowTwo = (RelativeLayout) findViewById(R.id.dice_frame_second);
 
+        Button rollDiceButton = (Button) findViewById(R.id.button);
         rollDiceButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                if (allTrue(isLocked)) {
+                    Toast toast = Toast.makeText(getBaseContext(), getString(R.string.all_locked_hint), Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
+                    toast.show();
+                }
                 if (diceContainer.getChildCount() > 0) diceContainer.removeAllViews();
                 if (diceRowTwo.getChildCount() > 0) diceRowTwo.removeAllViews();
                 setDice(rollDice(5));
@@ -102,9 +108,9 @@ public class MainActivity extends AppCompatActivity {
         RelativeLayout diceContainer = (RelativeLayout) findViewById(R.id.dice_frame);
         RelativeLayout diceRowTwo = (RelativeLayout) findViewById(R.id.dice_frame_second);
 
-        for (int j = 0; j < results.length; j++) {
+        /*for (int j = 0; j < results.length; j++) {
             System.out.println("Result " + results[j]);
-        }
+        }*/
 
         for (int i = 0; i < 3; i++) {
             diceContainer.addView(displayResults(results[i], dice[i]));
@@ -171,6 +177,14 @@ public class MainActivity extends AppCompatActivity {
             if (!isLocked[i])
             dice[i].startAnimation(animation);
         }
+    }
+
+    public static boolean allTrue(boolean[] values) {
+        for (boolean value : values) {
+            if (!value)
+                return false;
+        }
+        return true;
     }
 
     @Override

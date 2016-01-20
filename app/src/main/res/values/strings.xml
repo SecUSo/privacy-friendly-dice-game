@@ -6,6 +6,7 @@
 
     <!-- MainActivity-->
     <string name="roll_button">Roll the Dice</string>
+    <string name="all_locked_hint">All dice are locked.</string>
 
     <!-- AboutActivity-->
     <string name="about">About</string>
