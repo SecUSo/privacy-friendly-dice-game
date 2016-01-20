@@ -3,9 +3,97 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/content_frame">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <GridLayout
+        android:id="@+id/numbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:columnCount="3"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_dice_one"
+            android:layout_margin="10dp"
+            android:background="@drawable/dice"
+            android:textAllCaps="false"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/button_dice_two"
+            android:layout_margin="10dp"
+            android:background="@drawable/dice"
+            android:textAllCaps="false"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/button_dice_three"
+            android:layout_margin="10dp"
+            android:background="@drawable/dice"
+            android:textAllCaps="false"
+            android:textSize="12sp" />
+
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/dice_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignBottom="@+id/numbers"
+        android:layout_alignRight="@+id/numbers"
+        android:layout_alignEnd="@+id/numbers"
+        android:layout_alignLeft="@+id/numbers"
+        android:layout_alignStart="@+id/numbers"
+        android:layout_alignTop="@+id/numbers"></RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/rowTwo"
+        android:layout_below="@id/numbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:columnCount="2"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_dice_four"
+            android:layout_margin="10dp"
+            android:background="@drawable/dice"
+            android:textAllCaps="false"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/button_dice_five"
+            android:layout_margin="10dp"
+            android:background="@drawable/dice"
+            android:textAllCaps="false"
+            android:textSize="12sp" />
+
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/dice_frame_second"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignBottom="@+id/rowTwo"
+        android:layout_alignRight="@+id/rowTwo"
+        android:layout_alignEnd="@+id/rowTwo"
+        android:layout_alignLeft="@+id/rowTwo"
+        android:layout_alignStart="@+id/rowTwo"
+        android:layout_alignTop="@+id/rowTwo"></RelativeLayout>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/roll_button"
+        android:id="@+id/button"
+        android:background="@drawable/roll_button"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
