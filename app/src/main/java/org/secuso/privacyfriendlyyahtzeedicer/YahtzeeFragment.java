@@ -38,7 +38,7 @@ public class YahtzeeFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        rootView = inflater.inflate(R.layout.activity_main, container, false);
+        rootView = inflater.inflate(R.layout.fragment_yahtzee, container, false);
         //((ActionBarActivity)getActivity()).getSupportActionBar().setSubtitle(R.string.action_main);
         container.removeAllViews();
 
