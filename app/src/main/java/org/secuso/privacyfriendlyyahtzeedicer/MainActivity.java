@@ -1,17 +1,17 @@
 package org.secuso.privacyfriendlyyahtzeedicer;
 
+
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.util.Log;
 import android.view.Display;
@@ -26,6 +26,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+
 public class MainActivity extends ActionBarActivity {
 
     private ListView drawerList;
@@ -33,21 +34,15 @@ public class MainActivity extends ActionBarActivity {
     private ActionBarDrawerToggle drawerToggle;
     private String activityTitle;
 
-    public MainActivity() {
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //ActionBar
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(R.string.app_name);
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#024265")));
-
-        Display display = this.getWindowManager().getDefaultDisplay();
 
         drawerList = (ListView) findViewById(R.id.navList);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -64,6 +59,7 @@ public class MainActivity extends ActionBarActivity {
         DrawerItemCustomAdapter adapter = new DrawerItemCustomAdapter(this, R.layout.listview_item_row, drawerItem);
         drawerList.setAdapter(adapter);
 
+        Display display = getWindowManager().getDefaultDisplay();
 
         final FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         YahtzeeFragment yahtzeeFragment = new YahtzeeFragment();
@@ -75,7 +71,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void addDrawerItems() {
-        String[] mNavigationDrawerItemTitles = {getString(R.string.action_about)};
+        String[] mNavigationDrawerItemTitles = {getString(R.string.action_help), getString(R.string.action_about)};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, mNavigationDrawerItemTitles);
         drawerList.setAdapter(adapter);
 
@@ -104,6 +100,7 @@ public class MainActivity extends ActionBarActivity {
         drawerLayout.setDrawerListener(drawerToggle);
     }
 
+    @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         // Sync the toggle state after onRestoreInstanceState has occurred.
@@ -116,24 +113,23 @@ public class MainActivity extends ActionBarActivity {
         drawerToggle.onConfigurationChanged(newConfig);
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        //Remove comment in case menu on the right is needed
+        // getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent intent = new Intent();
-        switch (item.getItemId()) {
-            case R.id.action_about:
-                intent.setClass(this, AboutActivity.class);
-                startActivityForResult(intent, 0);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        if (drawerToggle.onOptionsItemSelected(item)) {
+            return true;
         }
+
+        return super.onOptionsItemSelected(item);
     }
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
@@ -210,4 +206,20 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        if (getFragmentManager().getBackStackEntryCount() == 1) {
+            finish();
+        }
+
+        if (getFragmentManager().getBackStackEntryCount() > 0) {
+            getFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
+        }
+    }
 }
+
+
+
+

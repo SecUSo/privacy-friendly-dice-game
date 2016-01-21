@@ -2,14 +2,14 @@
     <string name="app_name">Yahtzee Dicer</string>
     <string name="app_name_long">Privacy Friendly Yahtzee</string>
 
-    <string name="action_about">About</string>
-
     <!-- Navigation Drawer-->
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
 
     <!-- Menu Items-->
     <string name="action_navigation">Navigation</string>
+    <string name="action_help">Help</string>
+    <string name="action_about">About</string>
 
     <!-- MainActivity-->
     <string name="roll_button">Roll the Dice</string>
@@ -17,7 +17,7 @@
     <string name="round_headline">Round:</string>
     <string name="reset">Reset</string>
 
-    <!-- AboutActivity-->
+    <!-- AboutFragment-->
     <string name="about">About</string>
     <string name="version_number">Version 1.0</string>
     <string name="about_author">Author: Karola Marky</string>
