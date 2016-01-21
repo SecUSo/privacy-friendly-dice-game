@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Kniffel</string>
+    <string name="app_name_long">Privacy Friendly Kniffel</string>
+
+    <!-- Navigation Drawer-->
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <!-- Menu Items-->
+    <string name="action_navigation">Navigation</string>
+    <string name="action_help">Hilfe</string>
+    <string name="action_about">Über</string>
+
+    <!-- MainActivity-->
+    <string name="roll_button">Würfeln</string>
+    <string name="all_locked_hint">Alle Würfel sind gesperrt.</string>
+    <string name="round_headline">Runde:</string>
+    <string name="reset">Reset</string>
+
+    <!-- AboutFragment-->
+    <string name="version_number">Version 1.0</string>
+    <string name="about_author">Autor: Karola Marky</string>
+    <string name="about_affiliation">In Zusammenarbeit mit</string>
+    <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps.</string>
+    <string name="more_info">Mehr Informationen unter:</string>
+    <string name="url"><a href="https://www.secuso.informatik.tu-darmstadt.de/de/research/results/privacy-friendly-apps">https://www.secuso.org</a></string>
+
+    <!-- HelpFragment-->
+    <string name="help_privacy_heading">Datenschutzinfo</string>
+    <string name="help_permissions_heading">Berechtigungen</string>
+    <string name="help_permissions_description">Privacy Friendly Kniffel verzichtet auf Berechtigungen.</string>
+
+    <string name="help_rules_heading">Kniffel Regeln</string>
+    <string name="help_rules_scorecard">Für das Kniffelspiel wird eine Punktekarte (nicht in der App integriert) benötigt.</string>
+    <string name="help_rules_description">Pro Runde darf jeder Spieler biszu drei Male würfeln. Dabei können Spieler einzelne Würfel durch Klicken speichern.</string>
+</resources>

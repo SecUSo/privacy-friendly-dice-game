@@ -29,7 +29,7 @@
     <!-- HelpFragment-->
     <string name="help_privacy_heading">Privacy Info</string>
     <string name="help_permissions_heading">Permissions</string>
-    <string name="help_permissions_description">Privacy Friendly Yahtzee does not use any permissions</string>
+    <string name="help_permissions_description">Privacy Friendly Yahtzee does not use any permissions.</string>
 
     <string name="help_rules_heading">Yahtzee Rules</string>
     <string name="help_rules_scorecard">To play Yahtzee a scorecard (not included in the app) is required.</string>
