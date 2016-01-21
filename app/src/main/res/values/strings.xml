@@ -25,4 +25,13 @@
     <string name="privacy_friendly">This application belongs to the Privacy Friendly Apps.</string>
     <string name="more_info">More information can be found on:</string>
     <string name="url"><a href="https://www.secuso.informatik.tu-darmstadt.de/en/research/results/privacy-friendly-apps">https://www.secuso.org</a></string>
+
+    <!-- HelpFragment-->
+    <string name="help_privacy_heading">Privacy Info</string>
+    <string name="help_permissions_heading">Permissions</string>
+    <string name="help_permissions_description">Privacy Friendly Yahtzee does not use any permissions</string>
+
+    <string name="help_rules_heading">Yahtzee Rules</string>
+    <string name="help_rules_scorecard">To play Yahtzee a scorecard (not included in the app) is required.</string>
+    <string name="help_rules_description">In each round a player gets up to three rolls of dice. The player can lock the dice that should be saved by pressing them.</string>
 </resources>

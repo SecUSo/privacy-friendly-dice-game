@@ -158,6 +158,7 @@ public class MainActivity extends ActionBarActivity {
 
         if (fragment != null) {
             FragmentManager fragmentManager = getFragmentManager();
+
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).addToBackStack(null).commit();
 
             drawerList.setItemChecked(position, true);
