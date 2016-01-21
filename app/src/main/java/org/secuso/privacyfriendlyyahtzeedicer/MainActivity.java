@@ -14,6 +14,7 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.secuso.privacyfriendlyyahtzeedicer.dice.DiceFive;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private int[] oldResults;
     private float dotWidth;
     private boolean[] isLocked;
+    private int roundCounter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,9 +67,12 @@ public class MainActivity extends AppCompatActivity {
         setDice(new int[]{1, 2, 3, 4, 5});
         oldResults = new int[]{1, 2, 3, 4, 5};
 
+        roundCounter = 0;
+
         final RelativeLayout diceContainer = (RelativeLayout) findViewById(R.id.dice_frame);
         final RelativeLayout diceRowTwo = (RelativeLayout) findViewById(R.id.dice_frame_second);
 
+        //buttons
         Button rollDiceButton = (Button) findViewById(R.id.button);
         rollDiceButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -79,7 +84,23 @@ public class MainActivity extends AppCompatActivity {
                 if (diceContainer.getChildCount() > 0) diceContainer.removeAllViews();
                 if (diceRowTwo.getChildCount() > 0) diceRowTwo.removeAllViews();
                 setDice(rollDice(5));
+                if (roundCounter == 3) {
+                    roundCounter = 0;
+                } else {
+                    roundCounter++;
+                }
+                TextView roundCounterTextView = (TextView) findViewById(R.id.roundTextView);
+                roundCounterTextView.setText(Integer.toString(roundCounter));
                 flashResult();
+            }
+        });
+
+        Button resetButton = (Button) findViewById(R.id.resetButton);
+        resetButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                roundCounter = 0;
+                TextView roundCounterTextView = (TextView) findViewById(R.id.roundTextView);
+                roundCounterTextView.setText(Integer.toString(roundCounter));
             }
         });
 
