@@ -4,6 +4,13 @@
 
     <string name="action_about">About</string>
 
+    <!-- Navigation Drawer-->
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <!-- Menu Items-->
+    <string name="action_navigation">Navigation</string>
+
     <!-- MainActivity-->
     <string name="roll_button">Roll the Dice</string>
     <string name="all_locked_hint">All dice are locked.</string>
