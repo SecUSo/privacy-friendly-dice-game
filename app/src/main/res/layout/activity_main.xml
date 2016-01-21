@@ -1,10 +1,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:id="@+id/content_frame">
+    tools:context=".MainActivity">
 
     <GridLayout
         android:id="@+id/numbers"
@@ -19,22 +22,19 @@
             android:id="@+id/button_dice_one"
             android:layout_margin="10dp"
             android:background="@drawable/dice"
-            android:textAllCaps="false"
-             />
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/button_dice_two"
             android:layout_margin="10dp"
             android:background="@drawable/dice"
-            android:textAllCaps="false"
-             />
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/button_dice_three"
             android:layout_margin="10dp"
             android:background="@drawable/dice"
-            android:textAllCaps="false"
-             />
+            android:textAllCaps="false" />
 
     </GridLayout>
 
@@ -43,17 +43,17 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_alignBottom="@+id/numbers"
-        android:layout_alignRight="@+id/numbers"
         android:layout_alignEnd="@+id/numbers"
         android:layout_alignLeft="@+id/numbers"
+        android:layout_alignRight="@+id/numbers"
         android:layout_alignStart="@+id/numbers"
         android:layout_alignTop="@+id/numbers"></RelativeLayout>
 
     <GridLayout
         android:id="@+id/rowTwo"
-        android:layout_below="@id/numbers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/numbers"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:columnCount="2"
@@ -63,15 +63,13 @@
             android:id="@+id/button_dice_four"
             android:layout_margin="10dp"
             android:background="@drawable/dice"
-            android:textAllCaps="false"
-             />
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/button_dice_five"
             android:layout_margin="10dp"
             android:background="@drawable/dice"
-            android:textAllCaps="false"
-             />
+            android:textAllCaps="false" />
 
     </GridLayout>
 
@@ -80,9 +78,9 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_alignBottom="@+id/rowTwo"
-        android:layout_alignRight="@+id/rowTwo"
         android:layout_alignEnd="@+id/rowTwo"
         android:layout_alignLeft="@+id/rowTwo"
+        android:layout_alignRight="@+id/rowTwo"
         android:layout_alignStart="@+id/rowTwo"
         android:layout_alignTop="@+id/rowTwo"></RelativeLayout>
 
@@ -92,52 +90,52 @@
         android:layout_below="@+id/rowTwo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="124dp">
+
         <TextView
+            android:id="@+id/roundCounterTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Round:"
-            android:id="@+id/roundCounterTextView"
-            android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:textSize="24sp"
-            android:layout_marginRight="10dp" />
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/round_headline"
+            android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/roundTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
-            android:textSize="24sp"
-            android:id="@+id/roundTextView"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/roundCounterTextView"
+            android:layout_marginRight="20dp"
             android:layout_toEndOf="@+id/roundCounterTextView"
-            android:layout_marginRight="20dp" />
+            android:layout_toRightOf="@+id/roundCounterTextView"
+            android:text="0"
+            android:textSize="18sp" />
 
         <Button
+            android:id="@+id/resetButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/reset"
-            android:id="@+id/resetButton"
-            android:background="@drawable/reset_button"
-            android:textColor="@color/white"
             android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/roundTextView"
             android:layout_toRightOf="@+id/roundTextView"
-            android:layout_toEndOf="@+id/roundTextView" />
+            android:background="@drawable/reset_button"
+            android:text="@string/reset"
+            android:textColor="@color/white" />
 
     </RelativeLayout>
 
 
     <Button
+        android:id="@+id/button"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/roll_button"
-        android:id="@+id/button"
-        android:background="@drawable/roll_button"
-        android:textColor="@color/white"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roll_button"
+        android:text="@string/roll_button"
+        android:textColor="@color/white" />
 
 
 </RelativeLayout>

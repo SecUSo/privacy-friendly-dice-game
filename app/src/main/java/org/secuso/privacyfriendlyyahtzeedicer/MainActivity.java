@@ -1,36 +1,16 @@
 package org.secuso.privacyfriendlyyahtzeedicer;
 
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Display;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.widget.Button;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import org.secuso.privacyfriendlyyahtzeedicer.dice.DiceFive;
-import org.secuso.privacyfriendlyyahtzeedicer.dice.DiceFour;
-import org.secuso.privacyfriendlyyahtzeedicer.dice.DiceOne;
-import org.secuso.privacyfriendlyyahtzeedicer.dice.DiceSix;
-import org.secuso.privacyfriendlyyahtzeedicer.dice.DiceThree;
-import org.secuso.privacyfriendlyyahtzeedicer.dice.DiceTwo;
-
-public class MainActivity extends AppCompatActivity {
-
-    private Button[] dice;
-    private int[] oldResults;
-    private float dotWidth;
-    private boolean[] isLocked;
-    private int roundCounter;
+public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,167 +25,13 @@ public class MainActivity extends AppCompatActivity {
 
         Display display = this.getWindowManager().getDefaultDisplay();
 
-        dotWidth = display.getWidth() / 40;
-
-        dice = new Button[5];
-        dice[0] = (Button) findViewById(R.id.button_dice_one);
-        dice[1] = (Button) findViewById(R.id.button_dice_two);
-        dice[2] = (Button) findViewById(R.id.button_dice_three);
-        dice[3] = (Button) findViewById(R.id.button_dice_four);
-        dice[4] = (Button) findViewById(R.id.button_dice_five);
-
-        for (int i = 0; i < dice.length; i++) {
-            dice[i].setWidth(Math.round(display.getWidth() / 4));
-            dice[i].setHeight(Math.round(display.getWidth() / 4));
-        }
-
-        isLocked = new boolean[5];
-        for (int k = 0; k < isLocked.length; k++) {
-            isLocked[k] = false;
-        }
-
-        setDice(new int[]{1, 2, 3, 4, 5});
-        oldResults = new int[]{1, 2, 3, 4, 5};
-
-        roundCounter = 0;
-
-        final RelativeLayout diceContainer = (RelativeLayout) findViewById(R.id.dice_frame);
-        final RelativeLayout diceRowTwo = (RelativeLayout) findViewById(R.id.dice_frame_second);
-
-        //buttons
-        Button rollDiceButton = (Button) findViewById(R.id.button);
-        rollDiceButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (allTrue(isLocked)) {
-                    Toast toast = Toast.makeText(getBaseContext(), getString(R.string.all_locked_hint), Toast.LENGTH_SHORT);
-                    toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
-                    toast.show();
-                }
-                if (diceContainer.getChildCount() > 0) diceContainer.removeAllViews();
-                if (diceRowTwo.getChildCount() > 0) diceRowTwo.removeAllViews();
-                setDice(rollDice(5));
-                if (roundCounter == 3) {
-                    roundCounter = 0;
-                } else {
-                    roundCounter++;
-                }
-                TextView roundCounterTextView = (TextView) findViewById(R.id.roundTextView);
-                roundCounterTextView.setText(Integer.toString(roundCounter));
-                flashResult();
-            }
-        });
-
-        Button resetButton = (Button) findViewById(R.id.resetButton);
-        resetButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                roundCounter = 0;
-                TextView roundCounterTextView = (TextView) findViewById(R.id.roundTextView);
-                roundCounterTextView.setText(Integer.toString(roundCounter));
-            }
-        });
-
-        for (int j = 0; j < dice.length; j++) {
-            final int finalJ = j;
-            dice[j].setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    setLock(finalJ, v);
-                }
-            });
-        }
-    }
-
-    public void setLock(int finalJ, View button) {
-        boolean locked = isLocked[finalJ];
-        if (!locked) {
-            button.setBackgroundDrawable(getResources().getDrawable(R.drawable.dice_locked));
-        } else {
-            button.setBackgroundDrawable(getResources().getDrawable(R.drawable.dice));
-        }
-        isLocked[finalJ] = !isLocked[finalJ];
-    }
-
-    public void setDice(int[] results) {
-
-        RelativeLayout diceContainer = (RelativeLayout) findViewById(R.id.dice_frame);
-        RelativeLayout diceRowTwo = (RelativeLayout) findViewById(R.id.dice_frame_second);
-
-        /*for (int j = 0; j < results.length; j++) {
-            System.out.println("Result " + results[j]);
-        }*/
-
-        for (int i = 0; i < 3; i++) {
-            diceContainer.addView(displayResults(results[i], dice[i]));
-        }
-
-        for (int k = 3; k < dice.length; k++) {
-            diceRowTwo.addView(displayResults(results[k], dice[k]));
-        }
-
-    }
-
-    public View displayResults(int result, Button button) {
-
-        View resultView = new View(this);
-
-        switch (result) {
-            case 1:
-                resultView = new DiceOne(this, button, dotWidth);
-                break;
-            case 2:
-                resultView = new DiceTwo(this, button, dotWidth);
-                break;
-            case 3:
-                resultView = new DiceThree(this, button, dotWidth);
-                break;
-            case 4:
-                resultView = new DiceFour(this, button, dotWidth);
-                break;
-            case 5:
-                resultView = new DiceFive(this, button, dotWidth);
-                break;
-            case 6:
-                resultView = new DiceSix(this, button, dotWidth);
-                break;
-            default:
-                break;
-        }
-
-        return resultView;
-    }
-
-    public int[] rollDice(int poolSize) {
-        int[] dice = new int[poolSize];
-
-        for (int i = 0; i < dice.length; i++) {
-            if (isLocked[i]) {
-                dice[i] = oldResults[i];
-            } else {
-                dice[i] = (int) (Math.random() * 6) + 1;
-                oldResults[i] = dice[i];
-            }
-        }
-        return dice;
-    }
-
-    public void flashResult() {
-
-        Animation animation = new AlphaAnimation(0.0f, 1.0f);
-        animation.setDuration(500);
-        animation.setStartOffset(20);
-        animation.setRepeatMode(Animation.REVERSE);
-
-        for (int i=0;i<dice.length;i++) {
-            if (!isLocked[i])
-            dice[i].startAnimation(animation);
-        }
-    }
-
-    public static boolean allTrue(boolean[] values) {
-        for (boolean value : values) {
-            if (!value)
-                return false;
-        }
-        return true;
+        final FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+        YahtzeeFragment yahtzeeFragment = new YahtzeeFragment();
+        yahtzeeFragment.setDiceSize(Math.round(display.getWidth() / 4));
+        yahtzeeFragment.setDotWidth(display.getWidth() / 40);
+        fragmentTransaction.replace(R.id.content_frame, yahtzeeFragment, "YahtzeeFragment");
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
     @Override
