@@ -86,6 +86,40 @@
         android:layout_alignStart="@+id/rowTwo"
         android:layout_alignTop="@+id/rowTwo"></RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Round:"
+        android:id="@+id/roundCounterTextView"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Round:"
+        android:id="@+id/roundTextView"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/roundCounterTextView"
+        android:layout_toEndOf="@+id/roundCounterTextView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:id="@+id/roundCunterBbutton"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/roundTextView"
+        android:layout_toEndOf="@+id/roundTextView" />
+
+    </RelativeLayout>
+
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -95,5 +129,7 @@
         android:textColor="@color/white"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+
 
 </RelativeLayout>

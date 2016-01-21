@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         rollDiceButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (allTrue(isLocked)) {
-                    Toast toast = Toast.makeText(getBaseContext(), getString(R.string.all_locked_hint), Toast.LENGTH_LONG);
+                    Toast toast = Toast.makeText(getBaseContext(), getString(R.string.all_locked_hint), Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
                     toast.show();
                 }
