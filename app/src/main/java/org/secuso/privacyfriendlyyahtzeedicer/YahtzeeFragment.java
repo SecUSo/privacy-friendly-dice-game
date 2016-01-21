@@ -82,7 +82,7 @@ public class YahtzeeFragment extends Fragment {
                 if (diceRowTwo.getChildCount() > 0) diceRowTwo.removeAllViews();
                 setDice(rollDice(5));
                 if (roundCounter == 3) {
-                    roundCounter = 0;
+                    resetInterface();
                 } else {
                     roundCounter++;
                 }
@@ -95,9 +95,7 @@ public class YahtzeeFragment extends Fragment {
         Button resetButton = (Button) rootView.findViewById(R.id.resetButton);
         resetButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                roundCounter = 0;
-                TextView roundCounterTextView = (TextView) finalRootView.findViewById(R.id.roundTextView);
-                roundCounterTextView.setText(Integer.toString(roundCounter));
+                resetInterface();
             }
         });
 
@@ -118,6 +116,22 @@ public class YahtzeeFragment extends Fragment {
 
     public void setDotWidth(float dotWidth){
         this.dotWidth = dotWidth;
+    }
+
+    public void resetInterface() {
+        roundCounter = 0;
+        TextView roundCounterTextView = (TextView) rootView.findViewById(R.id.roundTextView);
+        roundCounterTextView.setText(Integer.toString(roundCounter));
+
+        for (int k = 0; k < isLocked.length; k++) {
+            isLocked[k] = false;
+        }
+
+        for (int i=0;i<dice.length;i++) {
+            dice[i].setBackgroundDrawable(getResources().getDrawable(R.drawable.dice));
+        }
+
+
     }
 
     public void setLock(int finalJ, View button) {
