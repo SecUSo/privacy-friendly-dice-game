@@ -10,6 +10,8 @@
     <string name="action_navigation">Navigation</string>
     <string name="action_help">Hilfe</string>
     <string name="action_about">Über</string>
+    <string name="action_play">Kniffel spielen</string>
+    <string name="action_playing">Spiel</string>
 
     <!-- MainActivity-->
     <string name="roll_button">Würfeln</string>
