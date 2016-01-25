@@ -2,7 +2,9 @@ package org.secuso.privacyfriendlyyahtzeedicer;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -36,11 +38,20 @@ public class YahtzeeFragment extends Fragment {
     private int roundCounter;
     View rootView;
 
+    public YahtzeeFragment(float dotWidth, int diceSize) {
+        super();
+        this.dotWidth = dotWidth;
+        this.diceSize = diceSize;
+
+    }
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         rootView = inflater.inflate(R.layout.fragment_yahtzee, container, false);
-        //((ActionBarActivity)getActivity()).getSupportActionBar().setSubtitle(R.string.action_main);
+        ((ActionBarActivity)getActivity()).getSupportActionBar().setSubtitle(R.string.action_playing);
         container.removeAllViews();
+
+        doFirstRun();
 
         dice = new Button[5];
         dice[0] = (Button) rootView.findViewById(R.id.button_dice_one);
@@ -161,6 +172,18 @@ public class YahtzeeFragment extends Fragment {
             diceRowTwo.addView(displayResults(results[k], dice[k]));
         }
 
+    }
+
+    private void doFirstRun() {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(activity);
+        sharedPreferences.edit().putString("firstShow", "").commit();
+        SharedPreferences settings = activity.getSharedPreferences("firstShow", activity.getBaseContext().MODE_PRIVATE);
+        if (settings.getBoolean("isFirstRun", true)) {
+            ((MainActivity)getActivity()).tutorialDialogYahtzee();
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putBoolean("isFirstRun", false);
+            editor.commit();
+        }
     }
 
     public View displayResults(int result, Button button) {

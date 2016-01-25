@@ -2,10 +2,12 @@ package org.secuso.privacyfriendlyyahtzeedicer;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -51,10 +53,11 @@ public class MainActivity extends ActionBarActivity {
         addDrawerItems();
         setupDrawer();
 
-        ObjectDrawerItem[] drawerItem = new ObjectDrawerItem[2];
+        ObjectDrawerItem[] drawerItem = new ObjectDrawerItem[3];
 
-        drawerItem[0] = new ObjectDrawerItem(R.drawable.ic_action_help, getString(R.string.action_help), "");
-        drawerItem[1] = new ObjectDrawerItem(R.drawable.ic_action_about, getString(R.string.action_about), "");
+        drawerItem[0] = new ObjectDrawerItem(R.drawable.ic_action_help, getString(R.string.action_play), "");
+        drawerItem[1] = new ObjectDrawerItem(R.drawable.ic_action_help, getString(R.string.action_help), "");
+        drawerItem[2] = new ObjectDrawerItem(R.drawable.ic_action_about, getString(R.string.action_about), "");
 
         DrawerItemCustomAdapter adapter = new DrawerItemCustomAdapter(this, R.layout.listview_item_row, drawerItem);
         drawerList.setAdapter(adapter);
@@ -62,9 +65,7 @@ public class MainActivity extends ActionBarActivity {
         Display display = getWindowManager().getDefaultDisplay();
 
         final FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-        YahtzeeFragment yahtzeeFragment = new YahtzeeFragment();
-        yahtzeeFragment.setDiceSize(Math.round(display.getWidth() / 4));
-        yahtzeeFragment.setDotWidth(display.getWidth() / 40);
+        YahtzeeFragment yahtzeeFragment = new YahtzeeFragment(display.getWidth() / 40, Math.round(display.getWidth() / 4));
         fragmentTransaction.replace(R.id.content_frame, yahtzeeFragment, "YahtzeeFragment");
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
@@ -147,9 +148,13 @@ public class MainActivity extends ActionBarActivity {
 
         switch (position) {
             case 0:
-                fragment = new HelpFragment();
+                Display display = getWindowManager().getDefaultDisplay();
+                fragment = new YahtzeeFragment(display.getWidth() / 40 ,Math.round(display.getWidth() / 4));
                 break;
             case 1:
+                fragment = new HelpFragment();
+                break;
+            case 2:
                 fragment = new AboutFragment();
                 break;
             default:
@@ -218,6 +223,34 @@ public class MainActivity extends ActionBarActivity {
         } else {
             super.onBackPressed();
         }
+    }
+
+    public void tutorialDialogYahtzee() {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
+
+        alertDialog.setTitle(R.string.tutorial_yahtzee_title);
+
+        alertDialog.setMessage(R.string.tutorial_yahtzee_description);
+
+        alertDialog.setIcon(R.drawable.ic_tutorial);
+
+        alertDialog.setPositiveButton(getString(R.string.confirm_button), new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+
+        alertDialog.setNegativeButton(getString(R.string.help_button), new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+
+                final FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame, new HelpFragment(), "HelpFragment");
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+                dialog.cancel();
+            }
+        });
+
+        alertDialog.show();
     }
 }
 
