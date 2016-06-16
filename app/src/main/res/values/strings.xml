@@ -6,8 +6,8 @@
     <string name="app_name_long">Privacy Friendly Yahtzee</string>
 
     <!-- Navigation Drawer-->
-    <string name="drawer_open">Open navigation drawer</string>
-    <string name="drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- Menu Items-->
     <string name="action_navigation">Navigation</string>
@@ -39,6 +39,13 @@
     <string name="help_rules_heading">Yahtzee Rules</string>
     <string name="help_rules_scorecard">To play Yahtzee a scorecard (not included in the app) is required.</string>
     <string name="help_rules_description">In each round a player gets up to three rolls of dice. The player can lock the dice that should be saved by pressing them.</string>
+
+    <string name="help_general">General</string>
+    <string name="help_general_description">Privacy Friendly Dicer can be used to roll between one and ten six-sided dice. Please, choose the number of dice with slider. </string>
+
+    <string name="settings_title">Dicing Settings</string>
+    <string name="enable_shaking">Roll Dice by Shaking</string>
+    <string name="vibration_title">Enable Vibration Feedback</string>
 
     <!-- Tutorials global-->
     <string name="confirm_button">Got it</string>
