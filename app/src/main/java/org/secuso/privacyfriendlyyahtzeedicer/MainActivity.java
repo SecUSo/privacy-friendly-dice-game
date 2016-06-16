@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity
         Button rollDiceButton = (Button) findViewById(R.id.button);
         rollDiceButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
                 if (allTrue(isLocked)) {
                     Toast toast = Toast.makeText(getApplicationContext(), getString(R.string.all_locked_hint), Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
@@ -97,6 +98,7 @@ public class MainActivity extends AppCompatActivity
                 setDice(rollDice(5));
                 if (roundCounter == 3) {
                     resetInterface();
+
                 } else {
                     roundCounter++;
                 }
@@ -117,23 +119,18 @@ public class MainActivity extends AppCompatActivity
             final int finalJ = j;
             dice[j].setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    setLock(finalJ, v);
+                    if (roundCounter == 0) {
+                    } else {
+                        setLock(finalJ, v);
+                    }
                 }
             });
         }
 
     }
 
-    public void setDiceSize(int diceSize) {
-        this.diceSize = diceSize;
-    }
-
-    public void setDotWidth(float dotWidth){
-        this.dotWidth = dotWidth;
-    }
-
     public void resetInterface() {
-        roundCounter = 0;
+        roundCounter = 1;
         TextView roundCounterTextView = (TextView) findViewById(R.id.roundTextView);
         roundCounterTextView.setText(Integer.toString(roundCounter));
 
@@ -141,7 +138,7 @@ public class MainActivity extends AppCompatActivity
             isLocked[k] = false;
         }
 
-        for (int i=0;i<dice.length;i++) {
+        for (int i = 0; i < dice.length; i++) {
             dice[i].setBackgroundDrawable(getResources().getDrawable(R.drawable.dice));
         }
 
@@ -228,7 +225,7 @@ public class MainActivity extends AppCompatActivity
         animation.setStartOffset(20);
         animation.setRepeatMode(Animation.REVERSE);
 
-        for (int i=0;i<dice.length;i++) {
+        for (int i = 0; i < dice.length; i++) {
             if (!isLocked[i])
                 dice[i].startAnimation(animation);
         }
@@ -280,7 +277,7 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         Intent intent;
 
-        switch(item.getItemId()) {
+        switch (item.getItemId()) {
             case R.id.nav_about:
                 intent = new Intent(this, AboutActivity.class);
                 startActivityForResult(intent, 0);
