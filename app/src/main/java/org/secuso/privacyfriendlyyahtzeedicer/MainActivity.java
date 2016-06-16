@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity
 
     private Button[] dice;
     private int[] oldResults;
+//    private int[] valuesRoundOne;
+//    private int[] valuesRoundTwo;
     private float dotWidth;
     private int diceSize;
     private boolean[] isLocked;
@@ -127,6 +129,27 @@ public class MainActivity extends AppCompatActivity
             });
         }
 
+//        Button backButton = (Button) findViewById(R.id.backButton);
+//        backButton.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                if (roundCounter != 0) {
+//                    switch (roundCounter) {
+//                        case 2: setDice(valuesRoundOne);
+//                            roundCounter = 1;
+//                            break;
+//                        case 3: setDice(valuesRoundTwo);
+//                            roundCounter = 2;
+//                            break;
+//                        default:
+//                    }
+//
+//                }
+//                TextView roundCounterTextView = (TextView) findViewById(R.id.roundTextView);
+//                roundCounterTextView.setText(Integer.toString(roundCounter));
+//
+//            }
+//        });
+
     }
 
     public void resetInterface() {
@@ -215,6 +238,19 @@ public class MainActivity extends AppCompatActivity
                 oldResults[i] = dice[i];
             }
         }
+
+//        switch (roundCounter) {
+//            case 1: for (int i=1; i<5; i++) {
+//                valuesRoundOne[i] = dice[i];
+//            }
+//                break;
+//            case 2: for (int i=1; i<5; i++){
+//                valuesRoundTwo[i] = dice[i];
+//            }
+//                break;
+//            default:
+//        }
+
         return dice;
     }
 
@@ -288,10 +324,10 @@ public class MainActivity extends AppCompatActivity
                 startActivityForResult(intent, 0);
                 return true;
 
-            case R.id.nav_settimgs:
-                intent = new Intent(this, SettingsActivity.class);
-                startActivityForResult(intent, 0);
-                return true;
+//            case R.id.nav_settimgs:
+//                intent = new Intent(this, SettingsActivity.class);
+//                startActivityForResult(intent, 0);
+//                return true;
             default:
         }
 
