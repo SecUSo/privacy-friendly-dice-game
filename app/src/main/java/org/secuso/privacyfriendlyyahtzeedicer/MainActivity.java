@@ -127,27 +127,27 @@ public class MainActivity extends AppCompatActivity
             });
         }
 
-        final Button backButton = (Button) findViewById(R.id.backButton);
-        backButton.setBackground(getResources().getDrawable(R.drawable.inactive_button));
-        backButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (roundCounter > 0) {
-                    //backButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.reset_button));
-                    if (diceContainer.getChildCount() > 0) diceContainer.removeAllViews();
-                    if (diceRowTwo.getChildCount() > 0) diceRowTwo.removeAllViews();
-                    setDice(backResults);
-                    if (roundCounter > 1) {
-                        roundCounter--;
-                    } else if (roundCounter == 1) {
-                        roundCounter = 3;
-                    }
-
-                    TextView roundCounterTextView = (TextView) findViewById(R.id.roundTextView);
-                    roundCounterTextView.setText(Integer.toString(roundCounter));
-                    flashResult();
-                }
-            }
-        });
+//        final Button backButton = (Button) findViewById(R.id.backButton);
+//        backButton.setBackground(getResources().getDrawable(R.drawable.inactive_button));
+//        backButton.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                if (roundCounter > 0) {
+//                    //backButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.reset_button));
+//                    if (diceContainer.getChildCount() > 0) diceContainer.removeAllViews();
+//                    if (diceRowTwo.getChildCount() > 0) diceRowTwo.removeAllViews();
+//                    setDice(backResults);
+//                    if (roundCounter > 1) {
+//                        roundCounter--;
+//                    } else if (roundCounter == 1) {
+//                        roundCounter = 3;
+//                    }
+//
+//                    TextView roundCounterTextView = (TextView) findViewById(R.id.roundTextView);
+//                    roundCounterTextView.setText(Integer.toString(roundCounter));
+//                    //flashResult();
+//                }
+//            }
+//        });
     }
 
     public void resetInterface() {
@@ -198,8 +198,8 @@ public class MainActivity extends AppCompatActivity
             diceRowTwo.addView(displayResults(results[k], dice[k]));
         }
 
-        Button backButton = (Button) findViewById(R.id.backButton);
-        backButton.setBackground(getResources().getDrawable(R.drawable.reset_button));
+        //Button backButton = (Button) findViewById(R.id.backButton);
+        //backButton.setBackground(getResources().getDrawable(R.drawable.reset_button));
 
         Button resetButton = (Button) findViewById(R.id.resetButton);
         resetButton.setBackground(getResources().getDrawable(R.drawable.reset_button));

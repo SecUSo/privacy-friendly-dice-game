@@ -129,6 +129,7 @@
 
     </RelativeLayout>
 
+    <!-- BackButton
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
@@ -139,7 +140,7 @@
         android:layout_alignBaseline="@+id/button"
         android:layout_alignBottom="@+id/button"
         android:layout_alignLeft="@+id/numbers"
-        android:layout_alignStart="@+id/numbers" />
+        android:layout_alignStart="@+id/numbers" /> -->
 
 
     <Button
@@ -149,8 +150,5 @@
         android:background="@drawable/roll_button"
         android:text="@string/roll_button"
         android:textColor="@color/white"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/backButton"
-        android:layout_marginLeft="16dp"
-        android:layout_toRightOf="@+id/backButton" />
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>
