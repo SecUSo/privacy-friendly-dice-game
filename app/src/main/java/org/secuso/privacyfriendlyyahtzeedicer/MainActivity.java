@@ -33,9 +33,9 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private Button[] dice;
-    private int[] oldResults;
-//    private int[] valuesRoundOne;
-//    private int[] valuesRoundTwo;
+    private int[] oldResults, backResults;
+        private int[] valuesRoundOne;
+    private int[] valuesRoundTwo;
     private float dotWidth;
     private int diceSize;
     private boolean[] isLocked;
@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity
 
         setDice(new int[]{1, 2, 3, 4, 5});
         oldResults = new int[]{1, 2, 3, 4, 5};
+        backResults = new int[5];
 
         roundCounter = 0;
 
@@ -129,27 +130,22 @@ public class MainActivity extends AppCompatActivity
             });
         }
 
-//        Button backButton = (Button) findViewById(R.id.backButton);
-//        backButton.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                if (roundCounter != 0) {
-//                    switch (roundCounter) {
-//                        case 2: setDice(valuesRoundOne);
-//                            roundCounter = 1;
-//                            break;
-//                        case 3: setDice(valuesRoundTwo);
-//                            roundCounter = 2;
-//                            break;
-//                        default:
-//                    }
-//
-//                }
-//                TextView roundCounterTextView = (TextView) findViewById(R.id.roundTextView);
-//                roundCounterTextView.setText(Integer.toString(roundCounter));
-//
-//            }
-//        });
-
+        final Button backButton = (Button) findViewById(R.id.backButton);
+        //backbutton.setBackground(getResources().getDrawable(R.drawable.inactive_button));
+        backButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (roundCounter > 1) {
+                    backButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.reset_button));
+                    if (diceContainer.getChildCount() > 0) diceContainer.removeAllViews();
+                    if (diceRowTwo.getChildCount() > 0) diceRowTwo.removeAllViews();
+                    setDice(backResults);
+                    roundCounter--;
+                    TextView roundCounterTextView = (TextView) findViewById(R.id.roundTextView);
+                    roundCounterTextView.setText(Integer.toString(roundCounter));
+                    flashResult();
+                }
+        }
+        });
     }
 
     public void resetInterface() {
@@ -164,7 +160,6 @@ public class MainActivity extends AppCompatActivity
         for (int i = 0; i < dice.length; i++) {
             dice[i].setBackgroundDrawable(getResources().getDrawable(R.drawable.dice));
         }
-
 
     }
 
@@ -228,6 +223,11 @@ public class MainActivity extends AppCompatActivity
     }
 
     public int[] rollDice(int poolSize) {
+
+        for (int j=0; j<5; j++){
+            backResults[j] = oldResults[j];
+        }
+
         int[] dice = new int[poolSize];
 
         for (int i = 0; i < dice.length; i++) {
@@ -238,6 +238,21 @@ public class MainActivity extends AppCompatActivity
                 oldResults[i] = dice[i];
             }
         }
+
+//        if (roundCounter == 1) {
+//            for (int i=0; i<5; i++) {
+//                valuesRoundOne[i] = oldResults[i];
+//            }
+//        }
+//
+//        if (roundCounter == 2) {
+//            for (int i=0; i<5; i++) {
+//                valuesRoundTwo[i] = oldResults[i];
+//            }
+//        }
+
+//        for (int j = 0; j < backResults.length; j++) {
+//            System.out.println("Back-Result " + backResults[j]);}
 
 //        switch (roundCounter) {
 //            case 1: for (int i=1; i<5; i++) {
