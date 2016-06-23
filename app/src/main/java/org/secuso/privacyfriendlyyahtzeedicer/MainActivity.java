@@ -2,19 +2,17 @@ package org.secuso.privacyfriendlyyahtzeedicer;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.Display;
-import android.view.Gravity;
-import android.view.View;
+import android.provider.Settings;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
+import android.view.Display;
+import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Button;
@@ -34,8 +32,6 @@ public class MainActivity extends AppCompatActivity
 
     private Button[] dice;
     private int[] oldResults, backResults;
-        private int[] valuesRoundOne;
-    private int[] valuesRoundTwo;
     private float dotWidth;
     private int diceSize;
     private boolean[] isLocked;
@@ -131,7 +127,6 @@ public class MainActivity extends AppCompatActivity
         }
 
         final Button backButton = (Button) findViewById(R.id.backButton);
-        //backbutton.setBackground(getResources().getDrawable(R.drawable.inactive_button));
         backButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (roundCounter > 1) {
@@ -152,6 +147,12 @@ public class MainActivity extends AppCompatActivity
         roundCounter = 1;
         TextView roundCounterTextView = (TextView) findViewById(R.id.roundTextView);
         roundCounterTextView.setText(Integer.toString(roundCounter));
+
+        Button backButton = (Button) findViewById(R.id.backButton);
+        backButton.setBackground(getResources().getDrawable(R.drawable.inactive_button));
+
+        Button resetButton = (Button)findViewById(R.id.resetButton);
+        resetButton.setBackground(getResources().getDrawable(R.drawable.inactive_button));
 
         for (int k = 0; k < isLocked.length; k++) {
             isLocked[k] = false;
@@ -188,6 +189,14 @@ public class MainActivity extends AppCompatActivity
 
         for (int k = 3; k < dice.length; k++) {
             diceRowTwo.addView(displayResults(results[k], dice[k]));
+        }
+
+        if (roundCounter == 1) {
+            Button backButton = (Button) findViewById(R.id.backButton);
+            backButton.setBackground(getResources().getDrawable(R.drawable.reset_button));
+
+            Button resetButton = (Button)findViewById(R.id.resetButton);
+            resetButton.setBackground(getResources().getDrawable(R.drawable.reset_button));
         }
 
     }
@@ -238,34 +247,6 @@ public class MainActivity extends AppCompatActivity
                 oldResults[i] = dice[i];
             }
         }
-
-//        if (roundCounter == 1) {
-//            for (int i=0; i<5; i++) {
-//                valuesRoundOne[i] = oldResults[i];
-//            }
-//        }
-//
-//        if (roundCounter == 2) {
-//            for (int i=0; i<5; i++) {
-//                valuesRoundTwo[i] = oldResults[i];
-//            }
-//        }
-
-//        for (int j = 0; j < backResults.length; j++) {
-//            System.out.println("Back-Result " + backResults[j]);}
-
-//        switch (roundCounter) {
-//            case 1: for (int i=1; i<5; i++) {
-//                valuesRoundOne[i] = dice[i];
-//            }
-//                break;
-//            case 2: for (int i=1; i<5; i++){
-//                valuesRoundTwo[i] = dice[i];
-//            }
-//                break;
-//            default:
-//        }
-
         return dice;
     }
 
