@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity
 
         setDice(new int[]{1, 2, 3, 4, 5});
         oldResults = new int[]{1, 2, 3, 4, 5};
-        backResults = new int[5];
+        backResults = new int[]{1, 2, 3, 4, 5};
 
         roundCounter = 0;
 
@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity
         });
 
         Button resetButton = (Button) findViewById(R.id.resetButton);
+        resetButton.setBackground(getResources().getDrawable(R.drawable.inactive_button));
         resetButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 resetInterface();
@@ -127,19 +128,25 @@ public class MainActivity extends AppCompatActivity
         }
 
         final Button backButton = (Button) findViewById(R.id.backButton);
+        backButton.setBackground(getResources().getDrawable(R.drawable.inactive_button));
         backButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (roundCounter > 1) {
-                    backButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.reset_button));
+                if (roundCounter > 0) {
+                    //backButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.reset_button));
                     if (diceContainer.getChildCount() > 0) diceContainer.removeAllViews();
                     if (diceRowTwo.getChildCount() > 0) diceRowTwo.removeAllViews();
                     setDice(backResults);
-                    roundCounter--;
+                    if (roundCounter > 1) {
+                        roundCounter--;
+                    } else if (roundCounter == 1) {
+                        roundCounter = 3;
+                    }
+
                     TextView roundCounterTextView = (TextView) findViewById(R.id.roundTextView);
                     roundCounterTextView.setText(Integer.toString(roundCounter));
                     flashResult();
                 }
-        }
+            }
         });
     }
 
@@ -148,11 +155,11 @@ public class MainActivity extends AppCompatActivity
         TextView roundCounterTextView = (TextView) findViewById(R.id.roundTextView);
         roundCounterTextView.setText(Integer.toString(roundCounter));
 
-        Button backButton = (Button) findViewById(R.id.backButton);
-        backButton.setBackground(getResources().getDrawable(R.drawable.inactive_button));
+//        Button backButton = (Button) findViewById(R.id.backButton);
+//        backButton.setBackground(getResources().getDrawable(R.drawable.inactive_button));
 
-        Button resetButton = (Button)findViewById(R.id.resetButton);
-        resetButton.setBackground(getResources().getDrawable(R.drawable.inactive_button));
+//        Button resetButton = (Button)findViewById(R.id.resetButton);
+//        resetButton.setBackground(getResources().getDrawable(R.drawable.inactive_button));
 
         for (int k = 0; k < isLocked.length; k++) {
             isLocked[k] = false;
@@ -191,14 +198,11 @@ public class MainActivity extends AppCompatActivity
             diceRowTwo.addView(displayResults(results[k], dice[k]));
         }
 
-        if (roundCounter == 1) {
-            Button backButton = (Button) findViewById(R.id.backButton);
-            backButton.setBackground(getResources().getDrawable(R.drawable.reset_button));
+        Button backButton = (Button) findViewById(R.id.backButton);
+        backButton.setBackground(getResources().getDrawable(R.drawable.reset_button));
 
-            Button resetButton = (Button)findViewById(R.id.resetButton);
-            resetButton.setBackground(getResources().getDrawable(R.drawable.reset_button));
-        }
-
+        Button resetButton = (Button) findViewById(R.id.resetButton);
+        resetButton.setBackground(getResources().getDrawable(R.drawable.reset_button));
     }
 
     public View displayResults(int result, Button button) {
@@ -233,7 +237,7 @@ public class MainActivity extends AppCompatActivity
 
     public int[] rollDice(int poolSize) {
 
-        for (int j=0; j<5; j++){
+        for (int j = 0; j < 5; j++) {
             backResults[j] = oldResults[j];
         }
 
@@ -263,6 +267,9 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+//    public void setActive(Button button){
+//        button.setBackground(getResources().getDrawable(R.drawable.reset_button));
+//    }
 
     public static boolean allTrue(boolean[] values) {
         for (boolean value : values) {

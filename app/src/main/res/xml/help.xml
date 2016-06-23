@@ -9,6 +9,12 @@
         <Preference
             android:summary="@string/help_rules_description"
             />
+        <Preference
+            android:title="@string/help_reset_heading"
+            android:summary="@string/help_reset"/>
+        <Preference
+            android:title="@string/help_back_heading"
+            android:summary="@string/help_back"/>
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/help_privacy_heading">

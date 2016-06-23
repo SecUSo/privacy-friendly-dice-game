@@ -113,7 +113,7 @@
             android:layout_marginRight="20dp"
             android:layout_toEndOf="@+id/roundCounterTextView"
             android:layout_toRightOf="@+id/roundCounterTextView"
-            android:text="0"
+            android:text="@string/initial_round"
             android:textSize="18sp" />
 
         <Button
@@ -123,7 +123,7 @@
             android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/roundTextView"
             android:layout_toRightOf="@+id/roundTextView"
-            android:background="@drawable/reset_button"
+            android:background="@drawable/inactive_button"
             android:text="@string/reset"
             android:textColor="@color/white" />
 
@@ -133,8 +133,8 @@
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/reset_button"
-        android:text="back"
+        android:background="@drawable/inactive_button"
+        android:text="@string/back"
         android:textColor="@color/white"
         android:layout_alignBaseline="@+id/button"
         android:layout_alignBottom="@+id/button"
