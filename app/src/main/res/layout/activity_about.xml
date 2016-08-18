@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:text="@string/app_name_long" />
 
     <TextView
@@ -39,23 +39,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="@string/version_number" />
 
-    <TextView
-        android:id="@+id/textFieldAuthor"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:text="@string/about_author" />
+        android:layout_marginTop="5dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/textFieldAuthorNames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_author_names" />
+
+        <TextView
+            android:id="@+id/textFieldContributors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_toEndOf="@+id/textFieldAuthorNames"
+            android:text="@string/about_author_contributors" />
+
+    </RelativeLayout>
+
 
     <TextView
         android:id="@+id/textFieldAffiliation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:text="@string/about_affiliation"
         android:textStyle="bold" />
 
@@ -69,23 +85,34 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_gravity="center_horizontal"
-        android:text="@string/privacy_friendly"/>
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/privacy_friendly" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:text="@string/more_info"/>
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="@string/more_info" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:autoLink="web"
         android:text="@string/url"
-        android:textStyle="bold"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:autoLink="web"/>
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:autoLink="web"
+        android:text="@string/github" />
 
 </LinearLayout>

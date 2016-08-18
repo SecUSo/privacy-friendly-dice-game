@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity
         final RelativeLayout diceRowTwo = (RelativeLayout) findViewById(R.id.dice_frame_second);
 
         //buttons
-        Button rollDiceButton = (Button) findViewById(R.id.button);
+        final Button rollDiceButton = (Button) findViewById(R.id.button);
         rollDiceButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
@@ -92,18 +92,21 @@ public class MainActivity extends AppCompatActivity
                     toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
                     toast.show();
                 }
-                if (diceContainer.getChildCount() > 0) diceContainer.removeAllViews();
-                if (diceRowTwo.getChildCount() > 0) diceRowTwo.removeAllViews();
-                setDice(rollDice(5));
-                if (roundCounter == 3) {
-                    resetInterface();
+                else {
 
-                } else {
-                    roundCounter++;
+                    if (diceContainer.getChildCount() > 0) diceContainer.removeAllViews();
+                    if (diceRowTwo.getChildCount() > 0) diceRowTwo.removeAllViews();
+                    setDice(rollDice(5));
+                    if (roundCounter == 3) {
+                        resetInterface();
+
+                    } else {
+                        roundCounter++;
+                    }
+                    TextView roundCounterTextView = (TextView) findViewById(R.id.roundTextView);
+                    roundCounterTextView.setText(Integer.toString(roundCounter));
+                    flashResult();
                 }
-                TextView roundCounterTextView = (TextView) findViewById(R.id.roundTextView);
-                roundCounterTextView.setText(Integer.toString(roundCounter));
-                flashResult();
             }
         });
 
@@ -127,39 +130,12 @@ public class MainActivity extends AppCompatActivity
             });
         }
 
-//        final Button backButton = (Button) findViewById(R.id.backButton);
-//        backButton.setBackground(getResources().getDrawable(R.drawable.inactive_button));
-//        backButton.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                if (roundCounter > 0) {
-//                    //backButton.setBackgroundDrawable(getResources().getDrawable(R.drawable.reset_button));
-//                    if (diceContainer.getChildCount() > 0) diceContainer.removeAllViews();
-//                    if (diceRowTwo.getChildCount() > 0) diceRowTwo.removeAllViews();
-//                    setDice(backResults);
-//                    if (roundCounter > 1) {
-//                        roundCounter--;
-//                    } else if (roundCounter == 1) {
-//                        roundCounter = 3;
-//                    }
-//
-//                    TextView roundCounterTextView = (TextView) findViewById(R.id.roundTextView);
-//                    roundCounterTextView.setText(Integer.toString(roundCounter));
-//                    //flashResult();
-//                }
-//            }
-//        });
     }
 
     public void resetInterface() {
         roundCounter = 1;
         TextView roundCounterTextView = (TextView) findViewById(R.id.roundTextView);
         roundCounterTextView.setText(Integer.toString(roundCounter));
-
-//        Button backButton = (Button) findViewById(R.id.backButton);
-//        backButton.setBackground(getResources().getDrawable(R.drawable.inactive_button));
-
-//        Button resetButton = (Button)findViewById(R.id.resetButton);
-//        resetButton.setBackground(getResources().getDrawable(R.drawable.inactive_button));
 
         for (int k = 0; k < isLocked.length; k++) {
             isLocked[k] = false;
@@ -186,10 +162,6 @@ public class MainActivity extends AppCompatActivity
         RelativeLayout diceContainer = (RelativeLayout) findViewById(R.id.dice_frame);
         RelativeLayout diceRowTwo = (RelativeLayout) findViewById(R.id.dice_frame_second);
 
-        /*for (int j = 0; j < results.length; j++) {
-            System.out.println("Result " + results[j]);
-        }*/
-
         for (int i = 0; i < 3; i++) {
             diceContainer.addView(displayResults(results[i], dice[i]));
         }
@@ -197,9 +169,6 @@ public class MainActivity extends AppCompatActivity
         for (int k = 3; k < dice.length; k++) {
             diceRowTwo.addView(displayResults(results[k], dice[k]));
         }
-
-        //Button backButton = (Button) findViewById(R.id.backButton);
-        //backButton.setBackground(getResources().getDrawable(R.drawable.reset_button));
 
         Button resetButton = (Button) findViewById(R.id.resetButton);
         resetButton.setBackground(getResources().getDrawable(R.drawable.reset_button));
@@ -267,10 +236,6 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-//    public void setActive(Button button){
-//        button.setBackground(getResources().getDrawable(R.drawable.reset_button));
-//    }
-
     public static boolean allTrue(boolean[] values) {
         for (boolean value : values) {
             if (!value)
@@ -294,21 +259,6 @@ public class MainActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
