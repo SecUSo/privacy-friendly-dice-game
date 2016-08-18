@@ -48,8 +48,6 @@
 
     <string name="help_reset_heading">Reset Button</string>
     <string name="help_reset">Resting the round counter to one.</string>
-    <string name="help_back_heading">Back Button</string>
-    <string name="help_back">Goes back to the last round.</string>
 
     <string name="help_general">General</string>
     <string name="help_general_description">Privacy Friendly Dicer can be used to roll between one and ten six-sided dice. Please, choose the number of dice with slider. </string>
