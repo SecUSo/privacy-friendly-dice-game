@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity
                         Toast toast = Toast.makeText(getApplicationContext(), getString(R.string.locked_hint), Toast.LENGTH_SHORT);
                         toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
                         toast.show();
-                    } else {
+                    } else if (roundCounter != 3) {
                         setLock(finalJ, v);
                     }
                 }
