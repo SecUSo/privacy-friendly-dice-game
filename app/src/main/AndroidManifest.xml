@@ -31,12 +31,6 @@
             android:parentActivityName=".MainActivity"
             android:screenOrientation="sensorPortrait">
         </activity>
-        <activity
-            android:name=".SettingsActivity"
-            android:label="@string/settings_title"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="sensorPortrait">
-        </activity>
     </application>
 
 </manifest>
