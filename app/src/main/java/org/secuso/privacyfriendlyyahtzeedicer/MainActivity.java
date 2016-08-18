@@ -125,7 +125,11 @@ public class MainActivity extends AppCompatActivity
         resetButton.setBackground(getResources().getDrawable(R.drawable.inactive_button));
         resetButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                resetInterface();
+                if (roundCounter != 0) {
+                    resetInterface();
+                    finalResult.setVisibility(View.INVISIBLE);
+                }
+
             }
         });
 
