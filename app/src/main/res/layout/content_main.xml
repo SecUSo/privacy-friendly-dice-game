@@ -87,7 +87,20 @@
         android:layout_alignStart="@+id/rowTwo"
         android:layout_alignTop="@+id/rowTwo"></RelativeLayout>
 
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text="@string/final_round"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:layout_below="@+id/rowTwo"
+        android:layout_centerHorizontal="true" />
+
     <RelativeLayout
+        android:id="@+id/resetArea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/rowTwo"
@@ -128,20 +141,6 @@
             android:textColor="@color/white" />
 
     </RelativeLayout>
-
-    <!-- BackButton
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/inactive_button"
-        android:text="@string/back"
-        android:textColor="@color/white"
-        android:layout_alignBaseline="@+id/button"
-        android:layout_alignBottom="@+id/button"
-        android:layout_alignLeft="@+id/numbers"
-        android:layout_alignStart="@+id/numbers" /> -->
-
 
     <Button
         android:id="@+id/button"

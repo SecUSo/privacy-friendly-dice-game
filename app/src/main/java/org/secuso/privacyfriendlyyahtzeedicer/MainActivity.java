@@ -56,6 +56,8 @@ public class MainActivity extends AppCompatActivity
         Display display = getWindowManager().getDefaultDisplay();
         setSizes(display.getWidth() / 40, Math.round(display.getWidth() / 4));
 
+        final TextView finalResult = (TextView) findViewById(R.id.resultTextView);
+
         dice = new Button[5];
         dice[0] = (Button) findViewById(R.id.button_dice_one);
         dice[1] = (Button) findViewById(R.id.button_dice_two);
@@ -99,13 +101,15 @@ public class MainActivity extends AppCompatActivity
                     setDice(rollDice(5));
 
                     if (roundCounter == 2) {
-                        Toast toast = Toast.makeText(getApplicationContext(), getString(R.string.final_round), Toast.LENGTH_SHORT);
-                        toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
-                        toast.show();
+                        for (int k=0;k<dice.length;k++) {
+                            dice[k].setBackground(getResources().getDrawable(R.drawable.dice_final));
+                        }
+                        finalResult.setVisibility(View.VISIBLE);
                     }
 
                     if (roundCounter == 3) {
                         resetInterface();
+                        finalResult.setVisibility(View.INVISIBLE);
 
                     } else {
                         roundCounter++;
@@ -240,10 +244,17 @@ public class MainActivity extends AppCompatActivity
         animation.setStartOffset(20);
         animation.setRepeatMode(Animation.REVERSE);
 
+        TextView finalResult = (TextView) findViewById(R.id.resultTextView);
+
         for (int i = 0; i < dice.length; i++) {
             if (!isLocked[i])
                 dice[i].startAnimation(animation);
         }
+
+        if (roundCounter == 3) {
+            finalResult.startAnimation(animation);
+        }
+
     }
 
     public static boolean allTrue(boolean[] values) {

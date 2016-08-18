@@ -20,7 +20,7 @@
     <string name="roll_button">Roll the Dice</string>
     <string name="all_locked_hint">All dice are locked.</string>
     <string name="locked_hint">Dice cannot be locked in round 0.</string>
-    <string name="final_round">Final result.</string>
+    <string name="final_round">Final result</string>
     <string name="round_headline">Round:</string>
     <string name="initial_round" translatable="false">0</string>
     <string name="reset">Reset</string>
