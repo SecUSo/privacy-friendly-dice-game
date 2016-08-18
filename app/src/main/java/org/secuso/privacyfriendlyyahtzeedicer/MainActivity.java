@@ -97,6 +97,13 @@ public class MainActivity extends AppCompatActivity
                     if (diceContainer.getChildCount() > 0) diceContainer.removeAllViews();
                     if (diceRowTwo.getChildCount() > 0) diceRowTwo.removeAllViews();
                     setDice(rollDice(5));
+
+                    if (roundCounter == 2) {
+                        Toast toast = Toast.makeText(getApplicationContext(), getString(R.string.final_round), Toast.LENGTH_SHORT);
+                        toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
+                        toast.show();
+                    }
+
                     if (roundCounter == 3) {
                         resetInterface();
 
@@ -123,6 +130,9 @@ public class MainActivity extends AppCompatActivity
             dice[j].setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     if (roundCounter == 0) {
+                        Toast toast = Toast.makeText(getApplicationContext(), getString(R.string.locked_hint), Toast.LENGTH_SHORT);
+                        toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
+                        toast.show();
                     } else {
                         setLock(finalJ, v);
                     }
