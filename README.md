@@ -20,7 +20,7 @@ Target SDK: 23
 
 ## License
 
-Privacy Friendly Yahtzee Dice is licensed under the GPLv3. The icons used in the nagivation drawer are licensed under CC BY 2.5 (http://creativecommons.org/licenses/by/2.5/). All other images (the logo of Privacy Friendly Apps, the SECUSO logo, the application's logo and the header in the navigation drawer) copyright Technische Universtität Darmstadt (2016)
+Privacy Friendly Yahtzee Dice is licensed under the GPLv3. The icons used in the nagivation drawer are licensed under CC BY 2.5 (http://creativecommons.org/licenses/by/2.5/). All other images (the logo of Privacy Friendly Apps, the SECUSO logo, the application's logo and the header in the navigation drawer) copyright Technische Universtität Darmstadt (2016).
 
 ## Contributors
 
