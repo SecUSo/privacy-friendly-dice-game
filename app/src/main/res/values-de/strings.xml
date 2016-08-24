@@ -25,7 +25,6 @@
     <string name="about_affiliation">In Zusammenarbeit mit</string>
     <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps entwickelt von der Technischen Universität Darmstadt. Quellcode lizenziert unter GPLv3. Bilder copyright TU Darmstadt und Google Inc.</string>
     <string name="more_info">Mehr Informationen unter:</string>
-    <string name="url"><a href="https://www.secuso.org/pfa">https://www.secuso.org/pfa</a></string>
 
     <!-- HelpFragment-->
     <string name="help_privacy_heading">Datenschutzinfo</string>

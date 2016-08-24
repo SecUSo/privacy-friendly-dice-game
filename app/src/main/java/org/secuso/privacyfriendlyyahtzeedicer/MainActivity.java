@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void resetInterface() {
-        roundCounter = 1;
+        roundCounter = 0;
         TextView roundCounterTextView = (TextView) findViewById(R.id.roundTextView);
         roundCounterTextView.setText(Integer.toString(roundCounter));
 
@@ -161,6 +161,16 @@ public class MainActivity extends AppCompatActivity
         for (int i = 0; i < dice.length; i++) {
             dice[i].setBackgroundDrawable(getResources().getDrawable(R.drawable.dice));
         }
+
+        RelativeLayout diceContainer = (RelativeLayout) findViewById(R.id.dice_frame);
+        RelativeLayout diceRowTwo = (RelativeLayout) findViewById(R.id.dice_frame_second);
+
+        if (diceContainer.getChildCount() > 0) diceContainer.removeAllViews();
+        if (diceRowTwo.getChildCount() > 0) diceRowTwo.removeAllViews();
+
+        setDice(new int[]{1, 2, 3, 4, 5});
+        oldResults = new int[]{1, 2, 3, 4, 5};
+        backResults = new int[]{1, 2, 3, 4, 5};
 
     }
 
