@@ -51,4 +51,3 @@ public class DiceFive extends View {
     }
 
 }
-

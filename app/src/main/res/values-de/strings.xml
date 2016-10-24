@@ -3,36 +3,49 @@
     <string name="app_name_long">Privacy Friendly Kniffel</string>
 
     <!-- Navigation Drawer-->
-    <string name="drawer_open">Open navigation drawer</string>
-    <string name="drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- Menu Items-->
     <string name="action_navigation">Navigation</string>
     <string name="action_help">Hilfe</string>
     <string name="action_about">Über</string>
-    <string name="action_play">Kniffel spielen</string>
-    <string name="action_playing">Spiel</string>
 
     <!-- MainActivity-->
     <string name="roll_button">Würfeln</string>
     <string name="all_locked_hint">Alle Würfel sind gesperrt.</string>
     <string name="round_headline">Runde:</string>
+    <string name="final_round">Endergebnis</string>
     <string name="reset">Reset</string>
+    <string name="locked_hint">Würfel können in Runde 0 nicht gespeichert werden.</string>
 
     <!-- AboutFragment-->
+    <string name="about">Über</string>
     <string name="version_number">Version 1.0</string>
-    <string name="about_author">Autor: Karola Marky</string>
+    <string name="about_author_names">Karola Marky und Mitwirkende.</string>
     <string name="about_affiliation">In Zusammenarbeit mit</string>
-    <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps.</string>
+    <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps entwickelt von der Technischen Universität Darmstadt. Quellcode lizenziert unter GPLv3. Bilder copyright TU Darmstadt und Google Inc.</string>
     <string name="more_info">Mehr Informationen unter:</string>
-    <string name="url"><a href="https://www.secuso.informatik.tu-darmstadt.de/de/research/results/privacy-friendly-apps">https://www.secuso.org</a></string>
 
     <!-- HelpFragment-->
+
     <string name="help_privacy_heading">Datenschutzinfo</string>
     <string name="help_permissions_heading">Berechtigungen</string>
     <string name="help_permissions_description">Privacy Friendly Kniffel verzichtet auf Berechtigungen.</string>
 
+    <string name="help_reset_heading">Zurücksetzen-Button</string>
+    <string name="help_reset">Setze den Rundenzähler auf 1 zurück.</string>
+
     <string name="help_rules_heading">Kniffel Regeln</string>
     <string name="help_rules_scorecard">Für das Kniffelspiel wird eine Punktekarte (nicht in der App integriert) benötigt.</string>
     <string name="help_rules_description">Pro Runde darf jeder Spieler bis zu drei Male würfeln. Dabei können Spieler einzelne Würfel durch Klicken speichern, um deren Ergebnis zu behalten.</string>
+
+    <!-- Tutorials global-->
+    <string name="confirm_button">Weiter</string>
+    <string name="help_button">Zur Hilfe</string>
+
+    <!-- Tutorials specific-->
+    <string name="tutorial_yahtzee_title">Kniffel spielen</string>
+    <string name="tutorial_yahtzee_description">Willkommen zu Privacy Friendly Kniffel! Durch Drücken der Würfel können diese gespeichert und freigegeben werden. </string>
+
 </resources>

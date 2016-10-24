@@ -3,36 +3,47 @@
     <string name="app_name_long">Privacy Friendly Kniffel</string>
 
     <!-- Navigation Drawer-->
-    <string name="drawer_open">Open navigation drawer</string>
-    <string name="drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- Menu Items-->
     <string name="action_navigation">Navigācija</string>
     <string name="action_help">Palīdzība</string>
     <string name="action_about">Informācija</string>
-    <string name="action_play">Play Yahtzee</string>
-    <string name="action_playing">Play</string>
 
     <!-- MainActivity-->
     <string name="roll_button">Mest kauliņus</string>
     <string name="all_locked_hint">Alle Würfel sind gesperrt.</string>
     <string name="round_headline">Runde:</string>
     <string name="reset">Reset</string>
+    <string name="locked_hint">Würfel können in Runde 0 nicht gespeichert werden.</string>
+    <string name="final_round">Final result</string>
 
     <!-- AboutFragment-->
+    <string name="about">About</string>
     <string name="version_number">Versija 1.0</string>
-    <string name="about_author">Autors: Karola Marky</string>
+    <string name="about_author_names">Autors: Karola Marky</string>
     <string name="about_affiliation">Sadarbībā ar</string>
     <string name="privacy_friendly">Šī aplikācija ir no Privacy Friendly Apps aplikāciju kataloga.</string>
     <string name="more_info">Papildus informācija (angļu valodā):</string>
-    <string name="url"><a href="https://www.secuso.informatik.tu-darmstadt.de/en/research/results/privacy-friendly-apps">https://www.secuso.org</a></string>
 
     <!-- HelpFragment-->
     <string name="help_privacy_heading">Datu drošības informācija</string>
     <string name="help_permissions_heading">Kādas privilēģijas ir šai programai?</string>
     <string name="help_permissions_description">Šī aplikācija neizmanto nekādu īpašu priviļēģiju.</string>
 
+    <string name="help_reset_heading">Reset Button</string>
+    <string name="help_reset">Resting the round counter to one.</string>
+
     <string name="help_rules_heading">Kniffel Regeln</string>
     <string name="help_rules_scorecard">Für das Kniffelspiel wird eine Punktekarte (nicht in der App integriert) benötigt.</string>
     <string name="help_rules_description">Pro Runde darf jeder Spieler bis zu drei Male würfeln. Dabei können Spieler einzelne Würfel durch Klicken speichern.</string>
+
+    <!-- Tutorials global-->
+    <string name="confirm_button">Got it</string>
+    <string name="help_button">View Help</string>
+
+    <!-- Tutorials specific-->
+    <string name="tutorial_yahtzee_title">Play Yahtzee</string>
+    <string name="tutorial_yahtzee_description">Welcome to Yahtzee! Dice can be (un)locked by pressing. </string>
 </resources>
