@@ -15,7 +15,6 @@
     <string name="roll_button">Mest kauliņus</string>
     <string name="all_locked_hint">Alle Würfel sind gesperrt.</string>
     <string name="round_headline">Runde:</string>
-    <string name="reset">Reset</string>
     <string name="locked_hint">Würfel können in Runde 0 nicht gespeichert werden.</string>
     <string name="final_round">Final result</string>
 
@@ -32,7 +31,7 @@
     <string name="help_permissions_heading">Kādas privilēģijas ir šai programai?</string>
     <string name="help_permissions_description">Šī aplikācija neizmanto nekādu īpašu priviļēģiju.</string>
 
-    <string name="help_reset_heading">Reset Button</string>
+    <string name="help_reset_heading">↺ Button</string>
     <string name="help_reset">Resting the round counter to one.</string>
 
     <string name="help_rules_heading">Kniffel Regeln</string>

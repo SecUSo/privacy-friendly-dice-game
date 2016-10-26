@@ -19,7 +19,7 @@
     <string name="final_round">Final result</string>
     <string name="round_headline">Round:</string>
     <string name="initial_round" translatable="false">0</string>
-    <string name="reset">Reset</string>
+    <string name="reset" translatable="false">↺</string>
 
     <!-- AboutFragment-->
     <string name="about">About</string>
@@ -40,8 +40,8 @@
     <string name="help_rules_scorecard">To play Yahtzee a scorecard (not included in the app) is required.</string>
     <string name="help_rules_description">In each round a player gets up to three rolls of dice. The player can lock the dice that should be saved by pressing them.</string>
 
-    <string name="help_reset_heading">Reset Button</string>
-    <string name="help_reset">Resting the round counter to one.</string>
+    <string name="help_reset_heading">↺ Button</string>
+    <string name="help_reset">Reseting the round counter to one.</string>
 
     <!-- Tutorials global-->
     <string name="confirm_button">Got it</string>

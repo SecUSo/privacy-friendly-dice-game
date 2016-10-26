@@ -16,7 +16,6 @@
     <string name="all_locked_hint">Alle Würfel sind gesperrt.</string>
     <string name="round_headline">Runde:</string>
     <string name="final_round">Endergebnis</string>
-    <string name="reset">Reset</string>
     <string name="locked_hint">Würfel können in Runde 0 nicht gespeichert werden.</string>
 
     <!-- AboutFragment-->
@@ -33,7 +32,7 @@
     <string name="help_permissions_heading">Berechtigungen</string>
     <string name="help_permissions_description">Privacy Friendly Kniffel verzichtet auf Berechtigungen.</string>
 
-    <string name="help_reset_heading">Zurücksetzen-Button</string>
+    <string name="help_reset_heading">↺ Button</string>
     <string name="help_reset">Setze den Rundenzähler auf 1 zurück.</string>
 
     <string name="help_rules_heading">Kniffel Regeln</string>

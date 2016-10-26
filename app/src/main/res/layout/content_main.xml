@@ -91,13 +91,13 @@
         android:id="@+id/resultTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
-        android:text="@string/final_round"
-        android:layout_marginTop="20dp"
-        android:textStyle="bold"
-        android:textSize="40sp"
         android:layout_below="@+id/rowTwo"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/final_round"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
 
     <RelativeLayout
         android:id="@+id/resetArea"
@@ -116,7 +116,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
             android:text="@string/round_headline"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/roundTextView"
@@ -125,31 +125,35 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
             android:layout_toEndOf="@+id/roundCounterTextView"
-            android:layout_toRightOf="@+id/roundCounterTextView"
             android:text="@string/initial_round"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/resetButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@+id/roundTextView"
-            android:layout_toRightOf="@+id/roundTextView"
-            android:background="@drawable/inactive_button"
-            android:text="@string/reset"
-            android:textColor="@color/white" />
+            android:textSize="20sp" />
 
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/resetButton"
+        style="@style/BorderlessButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/resetArea"
+        android:layout_alignBottom="@+id/resetArea"
+        android:layout_alignEnd="@+id/resultTextView"
+        android:layout_marginEnd="32dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:text="@string/reset"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:background="@drawable/roll_button"
+        android:elevation="10dp"
         android:text="@string/roll_button"
         android:textColor="@color/white"
-        android:elevation="10dp"
-        android:textSize="@dimen/text_size"
-        android:layout_alignParentBottom="true" />
+        android:textSize="@dimen/text_size" />
+
 </RelativeLayout>

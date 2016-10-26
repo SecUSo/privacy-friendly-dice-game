@@ -121,7 +121,6 @@ public class MainActivity extends AppCompatActivity
         });
 
         Button resetButton = (Button) findViewById(R.id.resetButton);
-        resetButton.setBackground(getResources().getDrawable(R.drawable.inactive_button));
         resetButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (roundCounter != 0) {
@@ -197,8 +196,6 @@ public class MainActivity extends AppCompatActivity
             diceRowTwo.addView(displayResults(results[k], dice[k]));
         }
 
-        Button resetButton = (Button) findViewById(R.id.resetButton);
-        resetButton.setBackground(getResources().getDrawable(R.drawable.reset_button));
     }
 
     public View displayResults(int result, Button button) {
