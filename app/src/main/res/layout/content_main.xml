@@ -150,5 +150,6 @@
         android:text="@string/roll_button"
         android:textColor="@color/white"
         android:elevation="10dp"
+        android:textSize="@dimen/text_size"
         android:layout_alignParentBottom="true" />
 </RelativeLayout>
