@@ -32,7 +32,7 @@
 
         <activity
             android:name=".HelpActivity"
-            android:label="Help"
+            android:label="@string/action_help"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="sensorPortrait">
         </activity>
