@@ -11,12 +11,12 @@ Privacy Friendly Yahtzee Dice belongs to the group of Privacy Friendly Apps and 
 
 ## Download and more Information
 
-Further development requires Android Studio, we recommend to use at least version 2.1.2
+Further development requires Android Studio, we recommend to use at least version 2.2.2
 
 ### API Reference
 
-Mininum SDK: 17
-Target SDK: 23 
+Mininum SDK: 21
+Target SDK: 25 
 
 ## License
 
@@ -28,8 +28,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
 
-The icons used in the nagivation drawer are licensed under the CC BY 2.5. In addition to them the app uses icons from Google Design Material Icons licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo and the header in the navigation drawer) copyright Technische Universtität Darmstadt (2016).
-Contributors
+The icons used in the nagivation drawer are licensed under the CC BY 2.5. In addition to them the app uses icons from Google Design Material Icons licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo and the header in the navigation drawer, the application logo, splash screen logo) copyright Technische Universtität Darmstadt (2016).
 
 ## Contributors
 
@@ -37,7 +36,7 @@ App-Icon: <br />
 Markus Hau <br />
 
 Github-Users: <br />
-Yonjuni <br />
+Yonjuni (Karola Marky) <br />
 
 
 
