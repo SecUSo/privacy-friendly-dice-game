@@ -5,7 +5,7 @@
 
     <item>
         <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
-            android:src="@mipmap/icon"
+            android:src="@mipmap/icon_splash"
             android:gravity="center"
             />
     </item>
