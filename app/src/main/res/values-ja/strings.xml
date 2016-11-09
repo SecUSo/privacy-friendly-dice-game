@@ -1,0 +1,50 @@
+<resources>
+
+    <string name="app_name">Yahtzee Dicer</string>
+    <string name="app_name_long">プライバシーフレンドリーな Yahtzee</string>
+
+    <!-- Navigation Drawer-->
+    <string name="navigation_drawer_open">ナビゲーションドロワーを開く</string>
+    <string name="navigation_drawer_close">ナビゲーションドロワーを閉じる</string>
+
+    <!-- Menu Items-->
+    <string name="action_navigation">ナビゲーション</string>
+    <string name="action_help">ヘルプ</string>
+    <string name="action_about">アプリについて</string>
+
+    <!-- MainActivity-->
+    <string name="roll_button">サイコロを転がす</string>
+    <string name="all_locked_hint">すべてのサイコロはロックされています。</string>
+    <string name="locked_hint">ラウンド 0 では、サイコロはロックできません。</string>
+    <string name="final_round">最終結果</string>
+    <string name="round_headline">ラウンド:</string>
+
+    <!-- AboutFragment-->
+    <string name="about">アプリについて</string>
+    <string name="version_number">バージョン 1.0</string>
+    <string name="about_author_names">Karola Marky と貢献者。</string>
+    <string name="about_affiliation">提携</string>
+    <string name="privacy_friendly">このアプリケーションは、ダルムシュタット工科大学が開発したプライバシーフレンドリーアプリのグループに属しています。ソースコードは GPLv3 の下でライセンスされます。画像の著作権は TU Darmstadt および Google Inc.</string>
+    <string name="more_info">さらに詳しい情報は以下でご覧ください:</string>
+
+    <!-- HelpFragment-->
+    <string name="help_privacy_heading">プライバシー情報</string>
+    <string name="help_permissions_heading">アクセス許可</string>
+    <string name="help_permissions_description">プライバシーフレンドリー Yahtzee は、何のアクセス許可も使用しません。</string>
+
+    <string name="help_rules_heading">Yahtzee ルール</string>
+    <string name="help_rules_scorecard">Yahtzee をプレイするにはスコアカード (アプリに含まれていません) が必要です。</string>
+    <string name="help_rules_description">それぞれのラウンドで、プレイヤーは 3 回までサイコロを転がします。プレイヤーはサイコロを押して、保存する必要があるサイコロをロックすることができます。</string>
+
+    <string name="help_reset_heading">↺ ボタン</string>
+    <string name="help_reset">ラウンドカウンターを 1 にリセットします。</string>
+
+    <!-- Tutorials global-->
+    <string name="confirm_button">了解</string>
+    <string name="help_button">ヘルプを表示</string>
+
+    <!-- Tutorials specific-->
+    <string name="tutorial_yahtzee_title">Yahtzee をプレイ</string>
+    <string name="tutorial_yahtzee_description">Yahtzee へようこそ! サイコロを押してロック(解除)できます。 </string>
+
+</resources>
