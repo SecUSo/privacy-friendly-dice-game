@@ -1,7 +1,7 @@
 <resources>
 
     <string name="app_name">Yahtzee Dicer</string>
-    <string name="app_name_long">プライバシーフレンドリーな Yahtzee</string>
+    <string name="app_name_long">Privacy Friendly Yahtzee Dicer</string>
 
     <!-- Navigation Drawer-->
     <string name="navigation_drawer_open">ナビゲーションドロワーを開く</string>
@@ -24,13 +24,13 @@
     <string name="version_number">バージョン 1.0</string>
     <string name="about_author_names">Karola Marky と貢献者。</string>
     <string name="about_affiliation">提携</string>
-    <string name="privacy_friendly">このアプリケーションは、ダルムシュタット工科大学が開発したプライバシーフレンドリーアプリのグループに属しています。ソースコードは GPLv3 の下でライセンスされます。画像の著作権は TU Darmstadt および Google Inc.</string>
+    <string name="privacy_friendly">このアプリケーションは、ダルムシュタット工科大学 (Technische Universität Darmstadt, Germany) が開発したプライバシーフレンドリーアプリのグループに属しています。ソースコードは GPLv3 の下でライセンスされます。画像の著作権は TU Darmstadt および Google Inc.</string>
     <string name="more_info">さらに詳しい情報は以下でご覧ください:</string>
 
     <!-- HelpFragment-->
     <string name="help_privacy_heading">プライバシー情報</string>
     <string name="help_permissions_heading">アクセス許可</string>
-    <string name="help_permissions_description">プライバシーフレンドリー Yahtzee は、何のアクセス許可も使用しません。</string>
+    <string name="help_permissions_description">Privacy Friendly Yahtzee Dicer は、何のアクセス許可も使用しません。</string>
 
     <string name="help_rules_heading">Yahtzee ルール</string>
     <string name="help_rules_scorecard">Yahtzee をプレイするにはスコアカード (アプリに含まれていません) が必要です。</string>

@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Kniffel</string>
-    <string name="app_name_long">Privacy Friendly Kniffel</string>
+    <string name="app_name">Kniffel Würfel</string>
+    <string name="app_name_long">Privacy Friendly Kniffel Würfel</string>
 
     <!-- Navigation Drawer-->
     <string name="navigation_drawer_open">Open navigation drawer</string>

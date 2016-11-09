@@ -1,7 +1,7 @@
 <resources>
 
     <string name="app_name">Yahtzee Dicer</string>
-    <string name="app_name_long">Privacy Friendly Yahtzee</string>
+    <string name="app_name_long">Privacy Friendly Yahtzee Dicer</string>
 
     <!-- Navigation Drawer-->
     <string name="navigation_drawer_open">Open navigation drawer</string>

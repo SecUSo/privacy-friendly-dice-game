@@ -37,6 +37,7 @@ Markus Hau <br />
 
 Github-Users: <br />
 Yonjuni (Karola Marky) <br />
+naofum (Japanese translation)
 
 
 
