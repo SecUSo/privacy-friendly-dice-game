@@ -57,6 +57,9 @@ public class MainActivity extends AppCompatActivity
 
         final TextView finalResult = (TextView) findViewById(R.id.resultTextView);
 
+        Button rollDiceButtonNotFinal = (Button) findViewById(R.id.button);
+        rollDiceButtonNotFinal.setText(getString(R.string.roll_button));
+
         dice = new Button[5];
         dice[0] = (Button) findViewById(R.id.button_dice_one);
         dice[1] = (Button) findViewById(R.id.button_dice_two);
@@ -104,11 +107,13 @@ public class MainActivity extends AppCompatActivity
                             dice[k].setBackground(getResources().getDrawable(R.drawable.dice_final));
                         }
                         finalResult.setVisibility(View.VISIBLE);
+                        rollDiceButton.setText(getString(R.string.new_round_button));
                     }
 
                     if (roundCounter == 3) {
                         resetInterface();
                         finalResult.setVisibility(View.INVISIBLE);
+                        rollDiceButton.setText(getString(R.string.roll_button));
 
                     } else {
                         roundCounter++;

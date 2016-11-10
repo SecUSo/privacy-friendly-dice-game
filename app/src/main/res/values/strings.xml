@@ -14,6 +14,7 @@
 
     <!-- MainActivity-->
     <string name="roll_button">Roll the Dice</string>
+    <string name="new_round_button">New Round</string>
     <string name="all_locked_hint">All dice are locked.</string>
     <string name="locked_hint">Dice cannot be locked in round 0.</string>
     <string name="final_round">Final result</string>

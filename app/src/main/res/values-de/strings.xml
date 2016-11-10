@@ -13,6 +13,7 @@
 
     <!-- MainActivity-->
     <string name="roll_button">Würfeln</string>
+    <string name="new_round_button">Neue Runde</string>
     <string name="all_locked_hint">Alle Würfel sind gesperrt.</string>
     <string name="round_headline">Runde:</string>
     <string name="final_round">Endergebnis</string>
