@@ -12,6 +12,7 @@
     <string name="action_about">Über</string>
 
     <!-- MainActivity-->
+    <string name="initial_text">Bitte würfeln Sie</string>
     <string name="roll_button">Würfeln</string>
     <string name="new_round_button">Neue Runde</string>
     <string name="all_locked_hint">Alle Würfel sind gesperrt.</string>

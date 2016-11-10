@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        hints(0);
+
         Display display = getWindowManager().getDefaultDisplay();
         setSizes(display.getWidth() / 40, Math.round(display.getWidth() / 4));
 
@@ -77,7 +79,10 @@ public class MainActivity extends AppCompatActivity
             isLocked[k] = false;
         }
 
-        setDice(new int[]{1, 2, 3, 4, 5});
+        for (int i = 0; i < dice.length; i++) {
+            dice[i].setBackground(getResources().getDrawable(R.drawable.invisible_button));
+        }
+
         oldResults = new int[]{1, 2, 3, 4, 5};
         backResults = new int[]{1, 2, 3, 4, 5};
 
@@ -101,6 +106,12 @@ public class MainActivity extends AppCompatActivity
                     if (diceContainer.getChildCount() > 0) diceContainer.removeAllViews();
                     if (diceRowTwo.getChildCount() > 0) diceRowTwo.removeAllViews();
                     setDice(rollDice(5));
+
+                    if (roundCounter == 0) {
+                        for (int k=0;k<dice.length;k++) {
+                            dice[k].setBackground(getResources().getDrawable(R.drawable.dice));
+                        }
+                    }
 
                     if (roundCounter == 2) {
                         for (int k=0;k<dice.length;k++) {
@@ -141,9 +152,6 @@ public class MainActivity extends AppCompatActivity
             dice[j].setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     if (roundCounter == 0) {
-                        Toast toast = Toast.makeText(getApplicationContext(), getString(R.string.locked_hint), Toast.LENGTH_SHORT);
-                        toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
-                        toast.show();
                     } else if (roundCounter != 3) {
                         setLock(finalJ, v);
                     }
@@ -172,9 +180,9 @@ public class MainActivity extends AppCompatActivity
         if (diceContainer.getChildCount() > 0) diceContainer.removeAllViews();
         if (diceRowTwo.getChildCount() > 0) diceRowTwo.removeAllViews();
 
-        setDice(new int[]{1, 2, 3, 4, 5});
-        oldResults = new int[]{1, 2, 3, 4, 5};
-        backResults = new int[]{1, 2, 3, 4, 5};
+        for (int i = 0; i < dice.length; i++) {
+            dice[i].setBackground(getResources().getDrawable(R.drawable.invisible_button));
+        }
 
     }
 
@@ -204,6 +212,8 @@ public class MainActivity extends AppCompatActivity
     }
 
     public View displayResults(int result, Button button) {
+
+        hints(1);
 
         View resultView = new View(getApplicationContext());
 
@@ -283,6 +293,34 @@ public class MainActivity extends AppCompatActivity
     public void setSizes(float dotWidth, int diceSize) {
         this.dotWidth = dotWidth;
         this.diceSize = diceSize;
+
+    }
+
+    public void hints(int position) {
+
+        TextView hint = (TextView) findViewById(R.id.initialTextView);
+        TextView hint2 = (TextView) findViewById(R.id.initialTextView2);
+
+        Animation anim = new AlphaAnimation(0.0f, 1.0f);
+
+        if (position==0) {
+            hint.setVisibility(View.VISIBLE);
+            hint2.setVisibility(View.VISIBLE);
+
+            anim.setDuration(1000);
+            anim.setStartOffset(20);
+            anim.setRepeatMode(Animation.REVERSE);
+            anim.setRepeatCount(Animation.INFINITE);
+            hint.startAnimation(anim);
+            hint2.startAnimation(anim);
+        } else {
+            hint.clearAnimation();
+            hint2.clearAnimation();
+            hint.setVisibility(View.INVISIBLE);
+            hint2.setVisibility(View.INVISIBLE);
+        }
+
+
 
     }
 

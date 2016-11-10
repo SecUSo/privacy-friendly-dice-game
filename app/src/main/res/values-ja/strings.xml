@@ -13,6 +13,7 @@
     <string name="action_about">アプリについて</string>
 
     <!-- MainActivity-->
+    <string name="initial_text">サイコロを転がしてください</string>
     <string name="roll_button">サイコロを転がす</string>
     <string name="new_round_button">新ラウンド</string>
     <string name="all_locked_hint">すべてのサイコロはロックされています。</string>

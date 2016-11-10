@@ -13,6 +13,8 @@
     <string name="action_about">About</string>
 
     <!-- MainActivity-->
+    <string name="initial_text">Start by rolling the dice</string>
+    <string name="initial_hint" translatable="false">↓</string>
     <string name="roll_button">Roll the Dice</string>
     <string name="new_round_button">New Round</string>
     <string name="all_locked_hint">All dice are locked.</string>
