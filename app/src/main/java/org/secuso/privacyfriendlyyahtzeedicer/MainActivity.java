@@ -184,6 +184,8 @@ public class MainActivity extends AppCompatActivity
             dice[i].setBackground(getResources().getDrawable(R.drawable.invisible_button));
         }
 
+        hints(0);
+
     }
 
     public void setLock(int finalJ, View button) {

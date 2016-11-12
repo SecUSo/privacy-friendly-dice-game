@@ -87,12 +87,12 @@
         android:layout_alignTop="@+id/rowTwo">
 
         <TextView
+            android:id="@+id/initialTextTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/initial_text"
-            android:textSize="20sp"
             android:layout_centerHorizontal="true"
-            android:id="@+id/textView" />
+            android:text="@string/initial_text"
+            android:textSize="20sp" />
     </RelativeLayout>
 
     <TextView
@@ -112,9 +112,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/rowTwo"
-        android:gravity="center"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="124dp">
+        android:layout_marginTop="124dp"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/roundCounterTextView"
@@ -141,15 +141,15 @@
             style="@style/BorderlessButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/roundTextView"
+            android:layout_alignBottom="@+id/roundTextView"
+            android:layout_marginStart="24dp"
+            android:layout_toEndOf="@+id/roundCounterTextView"
             android:background="?selectableItemBackgroundBorderless"
             android:text="@string/reset"
             android:textColor="@color/colorPrimary"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:layout_marginStart="24dp"
-            android:layout_alignBaseline="@+id/roundTextView"
-            android:layout_alignBottom="@+id/roundTextView"
-            android:layout_toEndOf="@+id/roundCounterTextView" />
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
@@ -165,26 +165,26 @@
 
     <TextView
         android:id="@+id/initialTextView"
-        android:text="@string/initial_hint"
         android:layout_width="wrap_content"
-        android:textStyle="bold"
-        android:textSize="40sp"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimaryDark"
         android:layout_above="@+id/button"
         android:layout_alignStart="@+id/numbers"
-        android:layout_marginBottom="11dp" />
+        android:layout_marginBottom="11dp"
+        android:text="@string/initial_hint"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/initialTextView2"
-        android:text="@string/initial_hint"
         android:layout_width="wrap_content"
-        android:textStyle="bold"
-        android:textSize="40sp"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimaryDark"
         android:layout_alignBaseline="@+id/initialTextView"
         android:layout_alignBottom="@+id/initialTextView"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:text="@string/initial_hint"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
