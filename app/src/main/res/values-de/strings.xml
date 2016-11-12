@@ -15,14 +15,12 @@
     <string name="initial_text">Bitte würfeln Sie</string>
     <string name="roll_button">Würfeln</string>
     <string name="new_round_button">Neue Runde</string>
-    <string name="all_locked_hint">Alle Würfel sind gesperrt.</string>
     <string name="round_headline">Runde:</string>
     <string name="final_round">Endergebnis</string>
-    <string name="locked_hint">Würfel können in Runde 0 nicht gespeichert werden.</string>
 
     <!-- AboutFragment-->
     <string name="about">Über</string>
-    <string name="version_number">Version 1.0</string>
+    <string name="version_number">Version 1.1</string>
     <string name="about_author_names">Karola Marky und Mitwirkende.</string>
     <string name="about_affiliation">In Zusammenarbeit mit</string>
     <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps entwickelt von der Technischen Universität Darmstadt. Quellcode lizenziert unter GPLv3. Bilder copyright TU Darmstadt und Google Inc.</string>
