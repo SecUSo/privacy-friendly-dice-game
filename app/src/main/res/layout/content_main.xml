@@ -11,6 +11,25 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="org.secuso.privacyfriendlyyahtzeedicer.MainActivity">
 
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/initialTextTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/initial_text"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:layout_below="@+id/initialTextTextView"
+        android:layout_marginTop="20dp"
+        android:id="@+id/backgroundImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/icon_background"
+        android:layout_centerHorizontal="true" />
+
+
     <GridLayout
         android:id="@+id/numbers"
         android:layout_width="wrap_content"
@@ -86,13 +105,7 @@
         android:layout_alignStart="@+id/rowTwo"
         android:layout_alignTop="@+id/rowTwo">
 
-        <TextView
-            android:id="@+id/initialTextTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="@string/initial_text"
-            android:textSize="20sp" />
+
     </RelativeLayout>
 
     <TextView

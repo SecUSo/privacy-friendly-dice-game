@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -301,13 +302,17 @@ public class MainActivity extends AppCompatActivity
     public void hints(int position) {
 
         TextView hint = (TextView) findViewById(R.id.initialTextView);
+        TextView initialText = (TextView) findViewById(R.id.initialTextTextView);
         TextView hint2 = (TextView) findViewById(R.id.initialTextView2);
+        ImageView background = (ImageView) findViewById(R.id.backgroundImageView);
 
         Animation anim = new AlphaAnimation(0.0f, 1.0f);
 
         if (position==0) {
             hint.setVisibility(View.VISIBLE);
             hint2.setVisibility(View.VISIBLE);
+            background.setVisibility(View.VISIBLE);
+            initialText.setVisibility(View.VISIBLE);
 
             anim.setDuration(1000);
             anim.setStartOffset(20);
@@ -315,11 +320,14 @@ public class MainActivity extends AppCompatActivity
             anim.setRepeatCount(Animation.INFINITE);
             hint.startAnimation(anim);
             hint2.startAnimation(anim);
+
         } else {
             hint.clearAnimation();
             hint2.clearAnimation();
             hint.setVisibility(View.INVISIBLE);
             hint2.setVisibility(View.INVISIBLE);
+            background.setVisibility(View.INVISIBLE);
+            initialText.setVisibility(View.INVISIBLE);
         }
 
 
