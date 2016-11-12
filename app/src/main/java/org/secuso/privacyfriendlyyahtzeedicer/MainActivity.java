@@ -98,9 +98,15 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
 
                 if (allTrue(isLocked)) {
-                    Toast toast = Toast.makeText(getApplicationContext(), getString(R.string.all_locked_hint), Toast.LENGTH_SHORT);
-                    toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
-                    toast.show();
+                    for (int k=0;k<dice.length;k++) {
+                        dice[k].setBackground(getResources().getDrawable(R.drawable.dice_final));
+                    }
+                    finalResult.setVisibility(View.VISIBLE);
+                    rollDiceButton.setText(getString(R.string.new_round_button));
+                    roundCounter = 3;
+                    for (int k = 0; k < isLocked.length; k++) {
+                        isLocked[k] = false;
+                    }
                 }
                 else {
 
