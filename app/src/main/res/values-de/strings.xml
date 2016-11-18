@@ -44,6 +44,7 @@
     <string name="help_button">Zur Hilfe</string>
 
     <!-- Tutorials specific-->
+    <string name="tutorial_yahtzee_title">Spielen</string>
     <string name="tutorial_yahtzee_description">Willkommen zu Privacy Friendly Würfelspiel! Durch Drücken der Würfel können diese gespeichert und freigegeben werden. </string>
 
 </resources>
