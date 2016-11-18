@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Kniffel Würfel</string>
-    <string name="app_name_long">Privacy Friendly Kniffel Würfel</string>
+    <string name="app_name">Würfelspiel</string>
+    <string name="app_name_long">Privacy Friendly Würfelspiel</string>
 
     <!-- Navigation Drawer-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -20,7 +20,7 @@
 
     <!-- AboutFragment-->
     <string name="about">Über</string>
-    <string name="version_number">Version 1.1</string>
+    <string name="version_number">Version 1.1.1</string>
     <string name="about_author_names">Karola Marky und Mitwirkende.</string>
     <string name="about_affiliation">In Zusammenarbeit mit</string>
     <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps entwickelt von der Technischen Universität Darmstadt. Quellcode lizenziert unter GPLv3. Bilder copyright TU Darmstadt und Google Inc.</string>
@@ -30,13 +30,13 @@
 
     <string name="help_privacy_heading">Datenschutzinfo</string>
     <string name="help_permissions_heading">Berechtigungen</string>
-    <string name="help_permissions_description">Privacy Friendly Kniffel verzichtet auf Berechtigungen.</string>
+    <string name="help_permissions_description">Privacy Friendly Würfelspiel verzichtet auf Berechtigungen.</string>
 
     <string name="help_reset_heading">↺ Button</string>
     <string name="help_reset">Setze den Rundenzähler auf 1 zurück.</string>
 
-    <string name="help_rules_heading">Kniffel Regeln</string>
-    <string name="help_rules_scorecard">Für das Kniffelspiel wird eine Punktekarte (nicht in der App integriert) benötigt.</string>
+    <string name="help_rules_heading">Spielregeln</string>
+    <string name="help_rules_scorecard">Für das Würfelspiel kann eine Punktekarte (nicht in der App integriert), die zum Spiel "Kniffel" verwendet wird, benutzt werden.</string>
     <string name="help_rules_description">Pro Runde darf jeder Spieler bis zu drei Male würfeln. Dabei können Spieler einzelne Würfel durch Klicken speichern, um deren Ergebnis zu behalten.</string>
 
     <!-- Tutorials global-->
@@ -45,6 +45,6 @@
 
     <!-- Tutorials specific-->
     <string name="tutorial_yahtzee_title">Kniffel spielen</string>
-    <string name="tutorial_yahtzee_description">Willkommen zu Privacy Friendly Kniffel! Durch Drücken der Würfel können diese gespeichert und freigegeben werden. </string>
+    <string name="tutorial_yahtzee_description">Willkommen zu Privacy Friendly Würfelspiel! Durch Drücken der Würfel können diese gespeichert und freigegeben werden. </string>
 
 </resources>

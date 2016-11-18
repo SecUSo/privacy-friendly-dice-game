@@ -24,7 +24,7 @@
 
     <!-- AboutFragment-->
     <string name="about">About</string>
-    <string name="version_number">Version 1.1</string>
+    <string name="version_number">Version 1.1.1</string>
     <string name="about_author_names">Karola Marky and contributors.</string>
     <string name="about_affiliation">In affiliation with</string>
     <string name="privacy_friendly">This application belongs to the group of Privacy Friendly Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
