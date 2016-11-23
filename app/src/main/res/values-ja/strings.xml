@@ -1,7 +1,7 @@
 <resources>
 
-    <string name="app_name">Yahtzee Dicer</string>
-    <string name="app_name_long">Privacy Friendly Yahtzee Dicer</string>
+    <string name="app_name">Dice Game</string>
+    <string name="app_name_long">Privacy Friendly Dice Game</string>
 
     <!-- Navigation Drawer-->
     <string name="navigation_drawer_open">ナビゲーションドロワーを開く</string>
@@ -30,10 +30,9 @@
     <!-- HelpFragment-->
     <string name="help_privacy_heading">プライバシー情報</string>
     <string name="help_permissions_heading">アクセス許可</string>
-    <string name="help_permissions_description">Privacy Friendly Yahtzee Dicer は、何のアクセス許可も使用しません。</string>
+    <string name="help_permissions_description">Privacy Friendly Dice Game は、何のアクセス許可も使用しません。</string>
 
-    <string name="help_rules_heading">Yahtzee ルール</string>
-    <string name="help_rules_scorecard">Yahtzee をプレイするにはスコアカード (アプリに含まれていません) が必要です。</string>
+    <string name="help_rules_heading">ルール</string>
     <string name="help_rules_description">それぞれのラウンドで、プレイヤーは 3 回までサイコロを転がします。プレイヤーはサイコロを押して、保存する必要があるサイコロをロックすることができます。</string>
 
     <string name="help_reset_heading">↺ ボタン</string>

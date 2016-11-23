@@ -1,7 +1,7 @@
 <resources>
 
-    <string name="app_name">Yahtzee Dicer</string>
-    <string name="app_name_long">Privacy Friendly Yahtzee Dicer</string>
+    <string name="app_name">Dice Game</string>
+    <string name="app_name_long">Privacy Friendly Dice Game</string>
 
     <!-- Navigation Drawer-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -35,10 +35,9 @@
     <!-- HelpFragment-->
     <string name="help_privacy_heading">Privacy Info</string>
     <string name="help_permissions_heading">Permissions</string>
-    <string name="help_permissions_description">Privacy Friendly Yahtzee does not use any permissions.</string>
+    <string name="help_permissions_description">Privacy Friendly Dice Game does not use any permissions.</string>
 
-    <string name="help_rules_heading">Yahtzee Rules</string>
-    <string name="help_rules_scorecard">To play Yahtzee a scorecard (not included in the app) is required.</string>
+    <string name="help_rules_heading">Dice Game Rules</string>
     <string name="help_rules_description">In each round a player gets up to three rolls of dice. The player can lock the dice that should be saved by pressing them.</string>
 
     <string name="help_reset_heading">↺ Button</string>
@@ -49,7 +48,7 @@
     <string name="help_button">View Help</string>
 
     <!-- Tutorials specific-->
-    <string name="tutorial_yahtzee_title">Play Yahtzee</string>
-    <string name="tutorial_yahtzee_description">Welcome to Yahtzee! Dice can be (un)locked by pressing. </string>
+    <string name="tutorial_yahtzee_title">Play</string>
+    <string name="tutorial_yahtzee_description">Welcome to Dice Game! Dice can be (un)locked by pressing. </string>
 
 </resources>

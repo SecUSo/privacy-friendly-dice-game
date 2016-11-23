@@ -7,9 +7,6 @@
             android:summary="@string/help_rules_description"
             />
         <Preference
-            android:summary="@string/help_rules_scorecard"
-            />
-        <Preference
             android:title="@string/help_reset_heading"
             android:summary="@string/help_reset"/>
     </PreferenceCategory>

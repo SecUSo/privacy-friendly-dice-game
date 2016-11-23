@@ -36,7 +36,6 @@
     <string name="help_reset">Setze den Rundenzähler auf 1 zurück.</string>
 
     <string name="help_rules_heading">Spielregeln</string>
-    <string name="help_rules_scorecard">Für das Würfelspiel kann eine Punktekarte (nicht in der App integriert), die zum Spiel "Kniffel" verwendet wird, benutzt werden.</string>
     <string name="help_rules_description">Pro Runde darf jeder Spieler bis zu drei Male würfeln. Dabei können Spieler einzelne Würfel durch Klicken speichern, um deren Ergebnis zu behalten.</string>
 
     <!-- Tutorials global-->
