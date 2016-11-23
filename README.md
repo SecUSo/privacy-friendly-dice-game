@@ -1,5 +1,5 @@
-## Privacy Friendly Yahtzee Dice
-Privacy Friendly Yahtzee Dice is a very simple application  and can be used to play Yahtzee.
+## Privacy Friendly Dice Game
+Privacy Friendly Dice Game is a very simple application to play a dice game with five dice. Particular dice can be saved for the next round by pressing them. A round counter helps to keep track over the round. The final result is displayed after round three. Users can define rules for collecting points like collecting pairs, three of kind, four of a kind, five of a kind, full house and others.
 
 This app is optimized regarding the user's privacy. It doesn't use any tracking mechanisms, neither it displays any advertisement.
 
@@ -7,7 +7,7 @@ This app belongs to the group of Privacy Friendly Apps developed by the Technisc
 
 ## Motivation
 
-Privacy Friendly Yahtzee Dice belongs to the group of Privacy Friendly Apps and has been developed to provide a privacy friendly dicing application. 
+Privacy Friendly Dice Game belongs to the group of Privacy Friendly Apps and has been developed to provide a privacy friendly dicing application. 
 
 ## Download and more Information
 
@@ -20,7 +20,7 @@ Target SDK: 25
 
 ## License
 
-Privacy Friendly Yahtzee is licensed under the GPLv3. Copyright (C) 2016 Karola Marky
+Privacy Friendly Dice Game is licensed under the GPLv3. Copyright (C) 2016 Karola Marky
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
