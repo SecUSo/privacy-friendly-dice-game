@@ -43,7 +43,7 @@
     <string name="help_button">ヘルプを表示</string>
 
     <!-- Tutorials specific-->
-    <string name="tutorial_yahtzee_title">Yahtzee をプレイ</string>
-    <string name="tutorial_yahtzee_description">Yahtzee へようこそ! サイコロを押してロック(解除)できます。 </string>
+    <string name="tutorial_yahtzee_title">プレイ</string>
+    <string name="tutorial_yahtzee_description">ようこそ! サイコロを押してロック(解除)できます。 </string>
 
 </resources>
