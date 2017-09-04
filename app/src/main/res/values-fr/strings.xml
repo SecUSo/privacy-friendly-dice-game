@@ -1,7 +1,7 @@
 <resources>
 
     <string name="app_name">Jeu de Dés</string>
-    <string name="app_name_long">Jeu de Dés Privacy Friendly</string>
+    <string name="app_name_long">Privacy Friendly Jeu de Dés</string>
 
     <!-- Navigation Drawer-->
     <string name="navigation_drawer_open">Ouvrir l\'onglet de navigation</string>
