@@ -25,6 +25,8 @@ import org.secuso.privacyfriendlydicegame.dice.DiceSix;
 import org.secuso.privacyfriendlydicegame.dice.DiceThree;
 import org.secuso.privacyfriendlydicegame.dice.DiceTwo;
 
+import java.security.SecureRandom;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -262,7 +264,10 @@ public class MainActivity extends AppCompatActivity
             if (isLocked[i]) {
                 dice[i] = oldResults[i];
             } else {
-                dice[i] = (int) (Math.random() * 6) + 1;
+                SecureRandom random = new SecureRandom();
+                byte bytes[] = new byte[6];
+                random.nextBytes(bytes);
+                dice[i] = random.nextInt(6) +1;
                 oldResults[i] = dice[i];
             }
         }
