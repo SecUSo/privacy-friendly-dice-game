@@ -1,4 +1,4 @@
-package org.secuso.privacyfriendlyyahtzeedicer;
+package org.secuso.privacyfriendlydicegame;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,12 +18,12 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import org.secuso.privacyfriendlyyahtzeedicer.dice.DiceFive;
-import org.secuso.privacyfriendlyyahtzeedicer.dice.DiceFour;
-import org.secuso.privacyfriendlyyahtzeedicer.dice.DiceOne;
-import org.secuso.privacyfriendlyyahtzeedicer.dice.DiceSix;
-import org.secuso.privacyfriendlyyahtzeedicer.dice.DiceThree;
-import org.secuso.privacyfriendlyyahtzeedicer.dice.DiceTwo;
+import org.secuso.privacyfriendlydicegame.dice.DiceFive;
+import org.secuso.privacyfriendlydicegame.dice.DiceFour;
+import org.secuso.privacyfriendlydicegame.dice.DiceOne;
+import org.secuso.privacyfriendlydicegame.dice.DiceSix;
+import org.secuso.privacyfriendlydicegame.dice.DiceThree;
+import org.secuso.privacyfriendlydicegame.dice.DiceTwo;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

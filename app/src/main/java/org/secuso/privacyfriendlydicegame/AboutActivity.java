@@ -1,4 +1,4 @@
-package org.secuso.privacyfriendlyyahtzeedicer;
+package org.secuso.privacyfriendlydicegame;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

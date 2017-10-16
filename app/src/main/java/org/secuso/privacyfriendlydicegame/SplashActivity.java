@@ -1,4 +1,4 @@
-package org.secuso.privacyfriendlyyahtzeedicer;
+package org.secuso.privacyfriendlydicegame;
 
 import android.content.Intent;
 import android.os.Bundle;

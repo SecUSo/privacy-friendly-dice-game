@@ -1,4 +1,4 @@
-package org.secuso.privacyfriendlyyahtzeedicer.dice;
+package org.secuso.privacyfriendlydicegame.dice;
 
 import android.content.Context;
 import android.graphics.Canvas;
