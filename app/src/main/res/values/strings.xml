@@ -8,7 +8,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- Menu Items-->
-    <string name="action_navigation">Navigation</string>
     <string name="action_help">Help</string>
     <string name="action_about">About</string>
 
@@ -35,7 +34,7 @@
     <!-- HelpFragment-->
     <string name="help_privacy_heading">Privacy Info</string>
     <string name="help_permissions_heading">Permissions</string>
-    <string name="help_permissions_description">Privacy Friendly Dice Game does not use any permissions.</string>
+    <string name="help_permissions_description">Privacy Friendly Dice Game does not require any permissions.</string>
 
     <string name="help_rules_heading">Dice Game Rules</string>
     <string name="help_rules_description">In each round a player gets up to three rolls of dice. The player can lock the dice that should be saved by pressing them.</string>

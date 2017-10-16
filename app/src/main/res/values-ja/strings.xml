@@ -8,7 +8,6 @@
     <string name="navigation_drawer_close">ナビゲーションドロワーを閉じる</string>
 
     <!-- Menu Items-->
-    <string name="action_navigation">ナビゲーション</string>
     <string name="action_help">ヘルプ</string>
     <string name="action_about">アプリについて</string>
 

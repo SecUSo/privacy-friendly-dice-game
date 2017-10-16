@@ -7,7 +7,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- Menu Items-->
-    <string name="action_navigation">Navigation</string>
     <string name="action_help">Hilfe</string>
     <string name="action_about">Über</string>
 
