@@ -1,0 +1,49 @@
+<resources>
+
+    <string name="app_name">Jeu de Dés</string>
+    <string name="app_name_long">Privacy Friendly Jeu de Dés</string>
+
+    <!-- Navigation Drawer-->
+    <string name="navigation_drawer_open">Ouvrir l\'onglet de navigation</string>
+    <string name="navigation_drawer_close">Fermer l\'onglet de navigation</string>
+
+    <!-- Menu Items-->
+    <string name="action_navigation">Navigation</string>
+    <string name="action_help">Aide</string>
+    <string name="action_about">À propos</string>
+
+    <!-- MainActivity-->
+    <string name="initial_text">Commencer par lancer les dés</string>
+    <string name="roll_button">Lancer les Dés</string>
+    <string name="new_round_button">Nouvelle Partie</string>
+    <string name="final_round">Résultat Final</string>
+    <string name="round_headline">Lancé :</string>
+
+    <!-- AboutFragment-->
+    <string name="about">À Propos</string>
+    <string name="version_number">Version 1.1.2</string>
+    <string name="about_author_names">Karola Marky et les contributeurs.</string>
+    <string name="about_affiliation">En affiliation avec</string>
+    <string name="privacy_friendly">Cette application appartient au groupe d\'applications respectant votre vie privée développées par la Technische Universität Darmstadt. Le code source est sous licence GPLv3. Copyright des images : TU Darmstadt et Google Inc.</string>
+    <string name="more_info">Plus d\'informations sur :</string>
+
+    <!-- HelpFragment-->
+    <string name="help_privacy_heading">Info Vie Privée</string>
+    <string name="help_permissions_heading">Permissions</string>
+    <string name="help_permissions_description">Jeu de Dés Privacy Friendly ne requiert aucune permission.</string>
+
+    <string name="help_rules_heading">Règles du Jeu de Dés</string>
+    <string name="help_rules_description">À chaque tour, le joueur a jusqu\'à trois lancés de dés. Le joueur peut bloquer les dés qui doivent être mis de côté en cliquant dessus.</string>
+
+    <string name="help_reset_heading">Bouton ↺</string>
+    <string name="help_reset">Réinitialiser le compteur de lancé à un.</string>
+
+    <!-- Tutorials global-->
+    <string name="confirm_button">OK !</string>
+    <string name="help_button">Voir l\'Aide</string>
+
+    <!-- Tutorials specific-->
+    <string name="tutorial_yahtzee_title">Jouer</string>
+    <string name="tutorial_yahtzee_description">Bienvenue dans ce Jeu de Dés ! Les dés peuvent être (dé)bloqués en cliquant dessus.</string>
+
+</resources>
