@@ -10,6 +10,12 @@ local.properties
 # Gradle generated files
 .gradle/
 
+#build files
+build/
+
+# Idea configuations
+.idea/
+
 # Signing files
 .signing/
 
@@ -17,7 +23,6 @@ local.properties
 .idea/libraries/
 .idea/workspace.xml
 .idea/tasks.xml
-.idea/gradle.xml
 .idea/.name
 .idea/compiler.xml
 .idea/copyright/profiles_settings.xml
@@ -36,3 +41,12 @@ local.properties
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Documents
+*.pdf
+*.doc
+*.docx
+*.odt
+
+#APK
+*.apk
