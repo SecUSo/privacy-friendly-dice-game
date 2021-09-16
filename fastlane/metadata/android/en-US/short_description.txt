@@ -1,1 +1,1 @@
-Privacy Friendly Dice Game displays five dice that can be rolled by a button.
+(SECUSO) Dice Game displays five dice that can be rolled by a button.
