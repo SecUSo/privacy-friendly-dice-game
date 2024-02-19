@@ -1,11 +1,5 @@
-Privacy Friendly Dice Game displays five dice that can be rolled by a button. Particular dice can be saved for the next round by pressing. A round counter helps supports the game. After three rounds the final result is displayed. Players can defines own rules to collect points like collecting pairs, three of a kind, four of a kind or a full house.
 
-It belongs to the Privacy Friendly Apps group developed by the research group SECUSO at Technische Universität Darmstadt. More information can be found an secuso.org/pfa
 
-How does Privacy Friendly Dice Game differ from other similar apps?
-
-1. No permissions
-Most of Gaming Apps in the Google Play Store require additional permissions. E.g. accessing the network or Internet which is mostly used to display advertisement. Some apps have access to GPS or telephony data.
-
-2. No advertisement
-Privacy Friendly Dice Game completely relinquishes advertisement. Many other apps in the Google Play Store display advertisement and therefore might violate the user’s privacy, shorten battery life or use mobile data.
+Twitter - @SECUSOResearch https://twitter.com/secusoresearch
+Mastodon - @SECUSO_Research@baw  .social https://xn--baw-joa.social/@SECUSO_Research/
+Job opening - https://secuso.aifb.kit.edu/english/Job_Offers_1557.php
