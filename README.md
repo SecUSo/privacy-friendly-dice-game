@@ -18,7 +18,7 @@ Privacy Friendly Dice Game is a very simple application to play a dice game with
 
 This app is optimized regarding the user's privacy. It doesn't use any tracking mechanisms, neither it displays any advertisement.
 
-This app belongs to the group of Privacy Friendly Apps developed by the Technische Universität Darmstadt. 
+This app belongs to the group of Privacy Friendly Apps developed by the Karlsruhe Institute of Technology. 
 
 ## Motivation
 
@@ -43,7 +43,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
 
-The icons used in the nagivation drawer below the header are licensed under the CC BY 2.5. In addition to them the app uses icons from Google Design Material Icons licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo and, the application logos, splash screen logo) copyright Technische Universtität Darmstadt (2016).
+The icons used in the nagivation drawer below the header are licensed under the CC BY 2.5. In addition to them the app uses icons from Google Design Material Icons licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo and, the application logos, splash screen logo) copyright [SECUSO](www.secuso.org) (2019).
 
 ## Contributors
 

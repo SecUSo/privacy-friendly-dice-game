@@ -1,6 +1,4 @@
-Privacy Friendly Würfelspiel ist ein Würfelspiel mit fünf Würfeln. Durch Drücken der Würfel können diese für die nächste Runde gespeichert werden. Ein kleiner Rundenzähler hilft weiteren Überblick zu behalten. Nach drei Runden wird das finale Ergebnis angezeigt. Die Spieler können selbst durch eigene Regeln entscheiden, wie Punkte gesammelt werden können (Beispiel: Sammeln von 2er, 3er, 4, 5er Pärchen, Full House).
 
-Inwiefern unterscheidet sich Privacy Friendly Würfelspiel von anderen ähnlichen Apps?
 
 1. Keine Berechtigungen
 Die meisten Spiele-Apps, die im Google Play Store erhältlich sind, benötigen zusätzliche Berechtigungen, die für die eigentliche Funktionalität jedoch nicht erforderlich sind. Hierzu zählen der Zugriff auf das Netzwerk oder das Internet, was meistens mit dem Anzeigen von Werbung verbunden ist. Einige können auf Standort- sowie Telefoniedaten zugreifen.
@@ -9,3 +7,9 @@ Die meisten Spiele-Apps, die im Google Play Store erhältlich sind, benötigen z
 Viele andere kostenlose Apps im Google Play Store blenden störende Werbung ein die unter anderem auch die Akkulaufzeit verkürzt und Datenvolumen verbrauchen kann.
 
 Die App gehört zur Gruppe der Privacy Friendly Apps, die von der Forschungsgruppe SECUSO der Technischen Universität Darmstadt entwickelt werden. Mehr Informationen unter: https://secuso.org/pfa
+
+
+Kontaktieren Sie uns gerne über:
+Twitter - @SECUSOResearch https://twitter.com/secusoresearc)
+Mastodon - @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
+Offene Stellen - https://secuso.aifb.kit.edu/83_1557.php

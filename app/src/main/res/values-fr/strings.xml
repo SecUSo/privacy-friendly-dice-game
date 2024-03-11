@@ -23,7 +23,7 @@
     <string name="version_number">Version</string>
     <string name="about_author_names">Karola Marky et les contributeurs.</string>
     <string name="about_affiliation">En affiliation avec</string>
-    <string name="privacy_friendly">Cette application appartient au groupe d\'applications respectant votre vie privée développées (Privacy Friendly Apps) par la Technische Universität Darmstadt. Le code source est sous licence GPLv3. Copyright des images : TU Darmstadt et Google Inc.</string>
+    <string name="privacy_friendly">Cette application appartient au groupe d\'applications respectant votre vie privée développées (Privacy Friendly Apps) par la Karlsruhe Institute of Technology. Le code source est sous licence GPLv3. Copyright des images : KIT et Google Inc.</string>
     <string name="more_info">Plus d\'informations sur :</string>
 
     <!-- HelpFragment-->
