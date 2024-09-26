@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity
     private int diceSize;
     private boolean[] isLocked;
     private int roundCounter;
+    private int maxRounds;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +92,8 @@ public class MainActivity extends AppCompatActivity
         dice[3] = (Button) findViewById(R.id.button_dice_four);
         dice[4] = (Button) findViewById(R.id.button_dice_five);
 
+        maxRounds = 5;
+
         for (int i = 0; i < dice.length; i++) {
             dice[i].setWidth(Math.round(diceSize));
             dice[i].setHeight(Math.round(diceSize));
@@ -124,7 +127,7 @@ public class MainActivity extends AppCompatActivity
                     }
                     finalResult.setVisibility(View.VISIBLE);
                     rollDiceButton.setText(getString(R.string.new_round_button));
-                    roundCounter = 3;
+                    roundCounter = maxRounds;
                     for (int k = 0; k < isLocked.length; k++) {
                         isLocked[k] = false;
                     }
@@ -141,7 +144,7 @@ public class MainActivity extends AppCompatActivity
                         }
                     }
 
-                    if (roundCounter == 2) {
+                    if (roundCounter == maxRounds-1) {
                         for (int k=0;k<dice.length;k++) {
                             dice[k].setBackground(getResources().getDrawable(R.drawable.dice_final));
                         }
@@ -149,7 +152,7 @@ public class MainActivity extends AppCompatActivity
                         rollDiceButton.setText(getString(R.string.new_round_button));
                     }
 
-                    if (roundCounter == 3) {
+                    if (roundCounter == maxRounds) {
                         resetInterface();
                         finalResult.setVisibility(View.INVISIBLE);
                         rollDiceButton.setText(getString(R.string.roll_button));
@@ -180,7 +183,7 @@ public class MainActivity extends AppCompatActivity
             dice[j].setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     if (roundCounter == 0) {
-                    } else if (roundCounter != 3) {
+                    } else if (roundCounter != maxRounds) {
                         setLock(finalJ, v);
                     }
                 }
@@ -309,7 +312,7 @@ public class MainActivity extends AppCompatActivity
                 dice[i].startAnimation(animation);
         }
 
-        if (roundCounter == 3) {
+        if (roundCounter == maxRounds) {
             finalResult.startAnimation(animation);
         }
 
