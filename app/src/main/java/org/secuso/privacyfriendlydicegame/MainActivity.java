@@ -187,6 +187,8 @@ public class MainActivity extends AppCompatActivity
             });
         }
 
+        GoodbyeGoogleHelperKt.checkGoodbyeGoogle(this, getLayoutInflater());
+
     }
 
     public void resetInterface() {
