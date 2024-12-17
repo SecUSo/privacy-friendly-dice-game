@@ -50,3 +50,7 @@ Thumbs.db
 
 #APK
 *.apk
+
+./gradlew
+./gradlew.bat
+./gradle/wrapper/gradle-wrapper.jar
