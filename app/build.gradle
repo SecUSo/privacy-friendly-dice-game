@@ -3,8 +3,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 34
-
+    compileSdk 34
+    namespace "org.secuso.privacyfriendlydicegame"
     defaultConfig {
         applicationId "org.secuso.privacyfriendlyyahtzeedicer"
         minSdkVersion 21
@@ -27,13 +27,19 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = JavaVersion.VERSION_17.toString()
+    }
+    kotlin {
+        jvmToolchain(17)
     }
     lintOptions {
         checkReleaseBuilds true
         // Or, if you prefer, you can continue to check for errors in release builds,
         // but continue the build even when errors are found:
         abortOnError false
+    }
+    lint {
+        lintConfig = file("lint.xml")
     }
 
     applicationVariants.configureEach { variant ->
