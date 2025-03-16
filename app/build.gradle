@@ -1,20 +1,51 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 33
-
+    compileSdk 34
+    namespace "org.secuso.privacyfriendlydicegame"
     defaultConfig {
         applicationId "org.secuso.privacyfriendlyyahtzeedicer"
         minSdkVersion 21
-        targetSdkVersion 33
-        versionCode 6
-        versionName "1.1.4"
+        targetSdkVersion 34
+        versionCode 7
+        versionName "1.1.5"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        dataBinding = true
+        buildConfig true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17.toString()
+    }
+    kotlin {
+        jvmToolchain(17)
+    }
+    lintOptions {
+        checkReleaseBuilds true
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    lint {
+        lintConfig = file("lint.xml")
+    }
+
+    applicationVariants.configureEach { variant ->
+        variant.outputs.configureEach {
+            def appName = "pfa-dice-game"
+            outputFileName = appName + "-${variant.name}-v${variant.versionName}.apk"
         }
     }
 }
