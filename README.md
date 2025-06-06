@@ -13,7 +13,7 @@
      style="float: right; margin-right: 10px;" />
 # Privacy Friendly Dice Game
 
-[<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="60">](https://f-droid.org/repository/browse/?fdfilter=yahtzee&fdid=org.secuso.privacyfriendlyyahtzeedicer)<a href="https://play.google.com/store/apps/details?id=org.secuso.privacyfriendlyyahtzeedicer"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" height="60"></a>
+[<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="60">](https://f-droid.org/repository/browse/?fdfilter=yahtzee&fdid=org.secuso.privacyfriendlyyahtzeedicer)
 
 Privacy Friendly Dice Game is a very simple application to play a dice game with five dice. Particular dice can be saved for the next round by pressing them. A round counter helps to keep track over the round. The final result is displayed after round three. Users can define rules for collecting points like collecting pairs, three of kind, four of a kind, five of a kind, full house and others.
 
