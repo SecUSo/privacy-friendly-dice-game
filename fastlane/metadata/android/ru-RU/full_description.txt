@@ -1,0 +1,13 @@
+Чем Privacy Friendly Dice Game отличается от других подобных приложений?
+
+1. Нет разрешений
+Большинство игровых приложений в Google Play Store требуют дополнительных разрешений. Например, доступ к сети или Интернету, который в основном используется для показа рекламы. Некоторые приложения имеют доступ к данным GPS или телефона.
+
+2. Нет рекламы
+Privacy Friendly Dice Game полностью отказывается от рекламы. Многие другие приложения в Google Play Store отображают рекламу и, следовательно, могут нарушать конфиденциальность пользователя, сокращать срок службы батареи или использовать мобильные данные.
+
+
+Feel free to contact us via:
+Twitter - @SECUSOResearch https://twitter.com/secusoresearch
+Mastodon - @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
+Job opening - https://secuso.aifb.kit.edu/english/Job_Offers_1557.php
