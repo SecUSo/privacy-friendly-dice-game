@@ -1,37 +1,38 @@
-package org.secuso.privacyfriendlydicegame
+package org.secuso.privacyfriendlyboardgameclock
 
 import android.content.Context
+import android.graphics.text.LineBreaker
 import android.os.Build
 import android.preference.PreferenceManager
 import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
+import android.widget.CheckBox
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
-import org.secuso.privacyfriendlydicegame.databinding.DialogGoodbyeGogleBinding
 
 fun checkGoodbyeGoogle(context: Context, layoutInflater: LayoutInflater) {
-    val installSource = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-        context.packageManager.getInstallSourceInfo(BuildConfig.APPLICATION_ID).installingPackageName
-    } else {
-        context.packageManager.getInstallerPackageName(BuildConfig.APPLICATION_ID)
-    }
 
     val showNotice = PreferenceManager.getDefaultSharedPreferences(context).getBoolean("show_goodbye_google_notice", true);
 
-    if (installSource == "com.android.vending" && showNotice) {
-        val binding = DialogGoodbyeGogleBinding.inflate(layoutInflater)
-        binding.showNoticeCheckbox.setOnClickListener {
-            PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean("show_goodbye_google_notice", !binding.showNoticeCheckbox.isChecked).apply()
+    if (showNotice) {
+        val view = layoutInflater.inflate(R.layout.dialog_goodbye_google, null, false)
+        view.findViewById<CheckBox>(R.id.show_notice_checkbox).apply {
+            setOnClickListener {
+                PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean("show_goodbye_google_notice", !isChecked).apply()
+            }
         }
         val dialog = AlertDialog.Builder(context)
-            .setIcon(android.R.drawable.ic_dialog_info)
-            .setTitle(R.string.dialog_goodbye_google_title)
-            .setMessage(R.string.dialog_goodbye_google_desc)
-            .setView(binding.root)
-            .setNeutralButton(android.R.string.ok) { _,_ -> }
+            .setView(view)
+            .setNeutralButton(android.R.string.ok) { _, _ -> }
+            .setCancelable(false)
             .create()
 
         dialog.show()
-        dialog.findViewById<TextView>(android.R.id.message)?.movementMethod = LinkMovementMethod.getInstance()
+        dialog.findViewById<TextView>(R.id.text)?.apply {
+            movementMethod = LinkMovementMethod.getInstance()
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                justificationMode = LineBreaker.JUSTIFICATION_MODE_INTER_WORD
+            }
+        }
     }
 }
