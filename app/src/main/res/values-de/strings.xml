@@ -1,22 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Würfelspiel</string>
     <string name="app_name_long">Privacy Friendly Würfelspiel</string>
-
     <!-- Navigation Drawer-->
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-
+    <string name="navigation_drawer_open">Navigationsmenü öffnen</string>
+    <string name="navigation_drawer_close">Navigationsmenü schließen</string>
     <!-- Menu Items-->
     <string name="action_help">Hilfe</string>
     <string name="action_about">Über</string>
-
     <!-- MainActivity-->
     <string name="initial_text">Bitte würfeln Sie</string>
     <string name="roll_button">Würfeln</string>
     <string name="new_round_button">Neue Runde</string>
     <string name="round_headline">Runde:</string>
     <string name="final_round">Endergebnis</string>
-
     <!-- AboutFragment-->
     <string name="about">Über</string>
     <string name="version_number">Version</string>
@@ -24,27 +21,21 @@
     <string name="about_affiliation">In Zusammenarbeit mit</string>
     <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps entwickelt vom Karlsruher Institut für Technologie. Quellcode lizenziert unter GPLv3. Bilder copyright KIT und Google Inc.</string>
     <string name="more_info">Mehr Informationen unter:</string>
-
     <!-- HelpFragment-->
 
     <string name="help_privacy_heading">Datenschutzinfo</string>
     <string name="help_permissions_heading">Berechtigungen</string>
     <string name="help_permissions_description">Privacy Friendly Würfelspiel verzichtet auf Berechtigungen.</string>
-
     <string name="help_reset_heading">↺ Button</string>
     <string name="help_reset">Setze den Rundenzähler auf 1 zurück.</string>
-
     <string name="help_rules_heading">Spielregeln</string>
     <string name="help_rules_description">Pro Runde darf jeder Spieler bis zu drei Male würfeln. Dabei können Spieler einzelne Würfel durch Klicken speichern, um deren Ergebnis zu behalten.</string>
-
     <!-- Tutorials global-->
     <string name="confirm_button">Weiter</string>
     <string name="help_button">Zur Hilfe</string>
-
     <!-- Tutorials specific-->
     <string name="tutorial_yahtzee_title">Spielen</string>
     <string name="tutorial_yahtzee_description">Willkommen zu Privacy Friendly Würfelspiel! Durch Drücken der Würfel können diese gespeichert und freigegeben werden. </string>
-
     <string name="dialog_goodbye_google_title">Wir verlassen den Google Play Store 😢</string>
     <string name="dialog_goodbye_google_desc">
         Unsere Apps müssen sich Mitte März 2025 vom Google Play Store verabschieden. Mehr Informationen zu den Gründen und warum das nicht das Ende der Privacy Friendly Apps ist, finden Sie auf unserer Website:\n
