@@ -9,8 +9,8 @@ android {
         applicationId "org.secuso.privacyfriendlyyahtzeedicer"
         minSdkVersion 21
         targetSdkVersion 34
-        versionCode 8
-        versionName "1.1.6"
+        versionCode 100
+        versionName "1.1.7"
     }
     buildTypes {
         release {
