@@ -1,5 +1,18 @@
 # Changelog
 
+<a id="v1.1.7"></a>
+## [Privacy Friendly Dice Game (v1.1.7)](https://github.com/SecUSo/privacy-friendly-dice-game/releases/tag/v1.1.7) - 2025-07-04
+
+## What's Changed
+* Adds weblate to README. by [@coderPaddyS](https://github.com/coderPaddyS) in [#21](https://github.com/SecUSo/privacy-friendly-dice-game/pull/21)
+* Updates versionCode to differentiate from last Google Play version
+
+
+**Full Changelog**: https://github.com/SecUSo/privacy-friendly-dice-game/compare/v1.1.6...v1.1.7
+
+[Changes][v1.1.7]
+
+
 <a id="v1.1.6"></a>
 ## [Privacy Friendly Dice Game (v1.1.6)](https://github.com/SecUSo/privacy-friendly-dice-game/releases/tag/v1.1.6) - 2025-04-19
 
@@ -74,6 +87,7 @@ Privacy Friendly Dice Game is an Android application for a dice game with five d
 [Changes][v1.0]
 
 
+[v1.1.7]: https://github.com/SecUSo/privacy-friendly-dice-game/compare/v1.1.6...v1.1.7
 [v1.1.6]: https://github.com/SecUSo/privacy-friendly-dice-game/compare/v1.1.4...v1.1.6
 [v1.1.4]: https://github.com/SecUSo/privacy-friendly-dice-game/compare/v1.1.3...v1.1.4
 [v1.1.3]: https://github.com/SecUSo/privacy-friendly-dice-game/compare/v1.1.2...v1.1.3
