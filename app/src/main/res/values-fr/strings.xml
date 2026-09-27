@@ -3,7 +3,7 @@
     <string name="app_name">Jeu de Dés</string>
     <string name="app_name_long">Privacy Friendly Jeu de Dés</string>
     <!-- Navigation Drawer-->
-    <string name="navigation_drawer_open">Ouvrir le menu de navigation</string>
+    <string name="navigation_drawer_open">Afficher le menu de navigation</string>
     <string name="navigation_drawer_close">Fermer le menu de navigation</string>
     <!-- Menu Items-->
     <string name="action_help">Aide</string>
@@ -18,9 +18,9 @@
     <string name="about">À propos</string>
     <string name="version_number">Version</string>
     <string name="about_author_names">Karola Marky et les contributeurs.</string>
-    <string name="about_affiliation">Affilié à</string>
-    <string name="privacy_friendly">Cette application appartient au groupe des Apps Respectueuses de la Vie Privée développées par le Karlsruhe Institute of Technology. Son code source est distribué sous licence GPLv3. Les droits d\'auteurs des images sont attribués à KIT et Google Inc.</string>
-    <string name="more_info">Plus d\'informations peuvent être consultées depuis :</string>
+    <string name="about_affiliation">En partenariat avec</string>
+    <string name="privacy_friendly">Cette application appartient au groupe des Applications Respectueuses de la Vie Privée développées par l\'institut de technologie de Karlsruhe. Le code source est licencié sous la GPLv3. Les images sont protégées par le droit d\'auteur de KIT et Google Inc.</string>
+    <string name="more_info">Des informations complémentaires sont disponibles sur :</string>
     <!-- HelpFragment-->
     <string name="help_privacy_heading">Info Vie Privée</string>
     <string name="help_permissions_heading">Permissions</string>
