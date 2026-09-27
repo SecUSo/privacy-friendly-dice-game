@@ -23,7 +23,7 @@
     <string name="more_info">Pour plus d\'informations :</string>
     <!-- HelpFragment-->
     <string name="help_privacy_heading">Vie privée</string>
-    <string name="help_permissions_heading">Permissions</string>
+    <string name="help_permissions_heading">Autorisations</string>
     <string name="help_permissions_description">Privacy Friendly Jeu de Dés ne requiert aucune permission.</string>
     <string name="help_rules_heading">Règles du Jeu de Dés</string>
     <string name="help_rules_description">À chaque tour, le joueur a jusqu\'à trois lancés de dés. Le joueur peut bloquer les dés qui doivent être mis de côté en cliquant dessus.</string>
