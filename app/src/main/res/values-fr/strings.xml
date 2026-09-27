@@ -35,4 +35,6 @@
     <!-- Tutorials specific-->
     <string name="tutorial_yahtzee_title">Jouer</string>
     <string name="tutorial_yahtzee_description">Bienvenue dans ce Privacy Friendly Jeu de Dés ! Les dés peuvent être (dé)bloqués en cliquant dessus.</string>
+    <string name="dialog_goodbye_google_title">Au revoir Google Play Store 😢</string>
+    <string name="dialog_goodbye_google_deactivate_notice">Ne plus afficher.</string>
 </resources>
