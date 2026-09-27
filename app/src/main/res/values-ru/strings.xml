@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="navigation_drawer_open">Открыть панель навигации</string>
+    <string name="navigation_drawer_close">Закрыть панель навигации</string>
+    <string name="action_help">Справка</string>
+    <string name="action_about">О приложении</string>
+    <string name="new_round_button">Новый раунд</string>
+    <string name="round_headline">Раунд:</string>
+    <string name="about">О приложении</string>
+    <string name="version_number">Версия</string>
+    <string name="about_affiliation">В сотрудничестве с</string>
+    <string name="help_permissions_heading">Разрешения</string>
+    <string name="help_rules_heading">Правила игры в кости</string>
+    <string name="help_reset_heading">↺ Кнопка</string>
+    <string name="help_reset">Сбросить счётчик раундов на один.</string>
+    <string name="confirm_button">Понял</string>
+    <string name="help_button">Посмотреть справку</string>
+    <string name="dialog_goodbye_google_title">Прощай, Google Play Store 😢</string>
+    <string name="dialog_goodbye_google_deactivate_notice">Больше не показывать.</string>
+    <string name="initial_text">Начните бросив кость</string>
+    <string name="app_name_long">Игра в кости (PFA)</string>
+    <string name="final_round">Окончательный результат</string>
+    <string name="app_name">Игра в кости</string>
+    <string name="tutorial_yahtzee_title">Играть</string>
+    <string name="help_rules_description">В каждом раунде игрок получает до трех бросков кости. Игрок может зафиксировать кости, которые должны быть сохранены, нажав их.</string>
+    <string name="roll_button">Бросить кость</string>
+    <string name="privacy_friendly">Это одно из приложений группы Уважающих Конфиденциальность Приложений (Privacy Friendly Apps, PFA), разработанных исследовательской группой SECUSO в Технологическом Институте Карлсруэ (KIT). Исходный код доступен по лицензии GPLv3. Авторские права на изображения принадлежат KIT и Google Inc.</string>
+    <string name="tutorial_yahtzee_description">Добро пожаловать в игру в кости! Кости можно (раз)крепить нажатием.</string>
+    <string name="dialog_goodbye_google_desc">Наши приложения должны будут попрощаться с Google Play Store в середине марта 2025 года. Вы можете найти более подробную информацию о причинах и почему это не конец приложений для конфиденциальности на нашем сайте:\n<a href="https://secuso.aifb.kit.edu/2809.php">Узнать больше </a></string>
+    <string name="more_info">Больше информации на:</string>
+    <string name="help_privacy_heading">О конфиденциальности</string>
+    <string name="about_author_names">Карола Марки и другие участники.</string>
+    <string name="help_permissions_description">Это приложение не требует разрешений.</string>
+</resources>
