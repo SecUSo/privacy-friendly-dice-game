@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">یاریی زار</string>
+    <string name="app_name_long">یاریی زاری خۆییئاسا</string>
+    <string name="navigation_drawer_open">درۆوەری ڕێنوێنی بکەرەوە</string>
+    <string name="navigation_drawer_close">درۆوەری ڕێنوێنی دابخە</string>
+    <string name="action_help">یارمەتی</string>
+    <string name="action_about">دەربارە</string>
+    <string name="initial_text">بە ھەڵدانی زارەکە دەستپێبکە</string>
+    <string name="roll_button">زاڕەکە ھەڵبدە</string>
+    <string name="new_round_button">خولێکی نوێ</string>
+    <string name="final_round">ئەنجامی کۆتایی</string>
+    <string name="round_headline">خول:</string>
+    <string name="about">دەربارە</string>
+    <string name="version_number">وەشان</string>
+    <string name="about_author_names">کارۆڵا مارکی و بەشداران.</string>
+    <string name="about_affiliation">بە پاڵپشتیی</string>
+    <string name="privacy_friendly">ئەم بەرنامەیە لەلایەن گرووپی بەرنامە خۆییئاساکانەوە خاوەندارێتیی دەکرێت و لەلایەن دامەزراوەی تەکنەلۆجیای کارلسروھەوە پەرەی پێدراوە. کۆدی سەرچاوەی لەژێر مۆڵەتنامەی GPLv3دایە. مافی خاوەندارێتیی وێنەکان دەگەڕێتەوە بۆ KIT و Google Inc.</string>
+    <string name="more_info">دەتوانیت زانیاریی زیاترت دەستبکەوێت لە:</string>
+    <string name="help_privacy_heading">زانیاریی تایبەتمەندێتی</string>
+    <string name="help_permissions_heading">ڕێپێدانەکان</string>
+    <string name="help_permissions_description">یاریی زاری خۆییئاسا پێویستی بە ھیچ ڕێپێدانێک نییە.</string>
+    <string name="help_rules_heading">یاساکانی یاریی زار</string>
+    <string name="help_rules_description">لە ھەر خولێکدا یاریزانێک تا سێ جار دەتوانێت زار فڕێ بدات. یاریزان دەتوانێت ئەو زارەی دەیەوێت بە پەنجەڕاگرتن لەسەری پاشەکەوتی بکات.</string>
+    <string name="help_reset_heading">دوگمەی ↺</string>
+    <string name="help_reset">ڕێکخستنەوەی خولەکە بۆ خولی یەکەم.</string>
+    <string name="confirm_button">تیگەیشتم</string>
+    <string name="help_button">یارمەتی ببینە</string>
+    <string name="tutorial_yahtzee_title">یاریبکە</string>
+    <string name="tutorial_yahtzee_description">بەخێربێیت بۆ یاریی زار! زارەکە دەتواندرێت قفڵ بکرێت/بکرێتەوە بە پەنجەپێدانان.</string>
+    <string name="dialog_goodbye_google_title">خوات لەگەڵ گووگڵ پلەی ستۆر 😢</string>
+    <string name="dialog_goodbye_google_desc">بەرنامەکانمان پێویستە خواحافیزی لە گووگڵ پلەی ستۆر بکەن لە ناوەڕاستی ئازاری ٢٠٢٥دا. دەتوانیت زانیاریی زیاترت دەستبکەوێت لەسەر ھۆکارەکان و بۆچی ئەمە کۆتاییی بەرنامە خۆییئاساکان نییە لەوێبگەکەمانەوە:\n<a href="https://secuso.aifb.kit.edu/2809.php">بڕوانە ئێرە بۆ زانیاریی زیاتر</a></string>
+    <string name="dialog_goodbye_google_deactivate_notice">ئەم ئاگادارییە پیشان مەدەوە.</string>
+</resources>
