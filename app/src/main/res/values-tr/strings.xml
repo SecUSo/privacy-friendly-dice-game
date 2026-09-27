@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="version_number">Sürüm</string>
+    <string name="help_button">Yardımı Görüntüle</string>
+    <string name="dialog_goodbye_google_deactivate_notice">Bu bildirimi bir daha gösterme.</string>
+    <string name="dialog_goodbye_google_title">Hoşça kal Google Play Store 😢</string>
+    <string name="tutorial_yahtzee_title">Oyna</string>
+    <string name="action_help">Yardım</string>
+</resources>
